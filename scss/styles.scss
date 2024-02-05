@@ -1,0 +1,144 @@
+$color_1: #ffffff;
+$color_2: #333333;
+$color_3: #ffc556;
+$background-color_1: #ffffff;
+$background-color_2: #ffc556;
+$background-color_3: #222222;
+
+@keyframes fadeInUp {
+	0% {
+		opacity: 0;
+		-webkit-transform: translate3d(0, 100%, 0);
+		transform: translate3d(0, 100%, 0);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translateZ(0);
+	}
+}
+.list_slider {
+	.slide_item {
+		position: relative;
+		.slide_item_content {
+			position: absolute;
+			top: 50%;
+			left: 30%;
+			transform: translate(-50%, -50%);
+			h5 {
+				color: $color_1;
+				font-size: 62px;
+				font-weight: 600;
+				opacity: 0;
+				line-height: 62px;
+				text-align: center;
+				text-shadow: rgba(0, 0, 0, 0.4) 0px 0px 4px;
+				margin-bottom: 18px;
+			}
+			p {
+				opacity: 0;
+				color: $color_1;
+				margin-bottom: 18px;
+				font-weight: 400;
+				font-size: 24px;
+				line-height: 36px;
+				text-shadow: rgba(0, 0, 0, 0.4) 0px 0px 4px;
+			}
+			a {
+				opacity: 0;
+				min-height: 50px;
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				position: relative;
+				left: 50%;
+				transform: translateX(-50%) !important;
+				color: $color_2;
+				background-color: $background-color_1;
+				font-size: 14px;
+				font-weight: 500;
+				padding: 0 44px;
+				&:hover {
+					background-color: $background-color_2;
+				}
+			}
+		}
+	}
+	.slick-dots {
+		bottom: 15px;
+		li {
+			width: auto;
+			button {
+				transition: all 0.3s;
+				width: 8px;
+				height: 8px;
+				border-radius: 5px;
+				background-color: $background-color_3;
+				opacity: 0.5;
+				padding: 0;
+				&::before {
+					content: "";
+				}
+			}
+		}
+		li.slick-active {
+			button {
+				opacity: 1;
+				width: 30px;
+			}
+		}
+	}
+	.slick-arrow {
+		&:before {
+			content: "";
+		}
+		opacity: 0;
+		visibility: hidden;
+		top: 50%;
+		transform: translateY(-50%) !important;
+		transition: all 0.3s;
+		background-color: $background-color_1;
+		z-index: 3;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		width: 44px;
+		height: 44px;
+		box-shadow: 0 2px 10px #36363626;
+		&:hover {
+			color: $color_3;
+			background-color: $background-color_2;
+		}
+		svg {
+			width: 16px;
+			height: 16px;
+		}
+	}
+	.pull-left {
+		left: 3%;
+	}
+	.pull-right {
+		right: 3%;
+	}
+	.container {
+		&:hover {
+			.slick-arrow {
+				opacity: 1;
+				visibility: visible;
+			}
+			.pull-left {
+				left: 2.5%;
+			}
+			.pull-right {
+				right: 2.5%;
+			}
+		}
+	}
+	.slick-dotted.slick-slider {
+		margin-bottom: 0;
+	}
+}
+.animation-fadeInUp {
+	animation: fadeInUp 1.5s both;
+}
+
