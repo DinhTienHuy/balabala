@@ -486,6 +486,7 @@
 /* end block instagram */
 .modal {
   position: fixed;
+  display: none;
   z-index: 100;
   top: 0;
   left: 0;
