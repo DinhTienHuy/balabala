@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/jquery-3.6.3.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/currencies.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <title>Homepage</title>
+  </head>
+  <body>
+    <header>
+      <div class="top-bar">
+        <div class="container">
+          <div class="row top-bar__wrap">
+            <div id="b_top-bar-0" class="top-bar__html col-12 col-lg-4">
+              <div class="top-bar-custom__html">
+                <a href="mailto:global@balabala.com">global@balabala.com</a>
+              </div>
+            </div>
+            <div id="b_top-bar-1" class="top-bar__text col-12 col-lg-4">
+              <div class="top-bar-text__item">
+                <p>FREE SHIPPING ON <span style="text-decoration: underline">$79+</span> ORDERS</p>
+              </div>
+            </div>
+            <div id="b_top-bar-2" class="top-bar__cur col-12 col-lg-4">
+              <div class="top-bar__languages">
+                <button class="change-data" data-id="dropdown_languagestop-bar">
+                  <span class="flagst4-en">English</span>
+                  <svg class="ion-select-arrow" role="presentation" viewBox="0 0 19 12">
+                    <polyline fill="none" stroke="currentColor" points="17 2 9.5 10 2 2" fill-rule="evenodd" stroke-width="2" stroke-linecap="square"></polyline>
+                  </svg>
+                </button>
+                <div class="dropdown__wrapper current-scrollbar" id="dropdown_languagestop-bar">
+                  <button type="button" class="lang-item flagst4-en is--selected" data-iso="en">English</button>
+                  <button type="button" class="lang-item flagst4-vi" data-iso="vi">Tiếng Việt</button>
+                </div>
+              </div>
+              <div class="top-bar__currencies">
+                <button class="change-data" data-id="dropdown_currenciestop-bar">
+                  <span class="flagst4 flagst4-VND">VND</span>
+                  <svg class="ion-select-arrow" role="presentation" viewBox="0 0 19 12">
+                    <polyline fill="none" stroke="currentColor" points="17 2 9.5 10 2 2" fill-rule="evenodd" stroke-width="2" stroke-linecap="square"></polyline>
+                  </svg>
+                </button>
+                <div class="dropdown__wrapper current-scrollbar" id="dropdown_currenciestop-bar">
+                  <div class="dropdown__list">
+                    <button
+                      type="button"
+                      data-flagst4="sm"
+                      data-currency-item=""
+                      data-dropdown-off=""
+                      class="currency-item flagst4 flagst4-USD"
+                      data-iso="USD"
+                    >
+                      USD</button
+                    ><button
+                      type="button"
+                      data-flagst4="sm"
+                      data-currency-item=""
+                      data-dropdown-off=""
+                      class="currency-item flagst4 flagst4-VND is--selected"
+                      data-iso="VND"
+                    >
+                      VND
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="center-header">
+        <div class="container">
+          <div class="row wrapper-center-header">
+            <div class="col-md-4 col-3 d-lg-none col-item-icon-menu">
+              <div href="/" class="push-menu-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="16" viewBox="0 0 30 16" fill="currentColor">
+                  <rect width="30" height="1.5"></rect>
+                  <rect y="7" width="20" height="1.5"></rect>
+                  <rect y="14" width="30" height="1.5"></rect>
+                </svg>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6 col-item-logo">
+              <div class=" header__logo lh-1">
+                <a href="/">
+                  <img src="images/logo-180.avif" class="header__normal-logo d-none d-lg-block" width="180" height="50" alt="balabala" style="width: 180px">
+                  <img src="images/logo-120.avif" class="header__sticky-logo d-none d-none" width="120" height="33" alt="balabala" style="width: 120px">
+                  <img src="images/logo-180.avif" class="header__mobile-logo d-lg-none" width="180" height="50" alt="balabala" style="width: 180px">
+                </a>
+              </div>
+            </div>
+            <div class="col d-none d-lg-block col-item-menu">
+              <nav class="navigation text-start nav__hover_sideup nav-arrow__true">
+                <ul class="nav__ul d-inline-flex flex-wrap align-items-center">
+                  <li class="type__simple menu-item">
+                    <a class="lh-1 d-flex align-items-center pr" href="#" target="_self">Home</a>
+                  </li>
+                  <li class="type__simple menu-item">
+                    <a class="lh-1 d-flex align-items-center pr" href="#" target="_self">Spring & Summer</a>
+                  </li>
+                  <li class="type__simple menu-item">
+                    <a class="lh-1 d-flex align-items-center pr" href="#" target="_self" style="color:#ecaf01">New</a>
+                  </li>
+                  <li class="type__simple menu-item">
+                    <a class="lh-1 d-flex align-items-center pr" href="#" target="_self" style="color:#dd1d1d">🧨 2024</a>
+                  </li>
+                  <li class="type__mega menu-item has--children menu-has__offsets">
+                    <a class="lh-1 d-flex align-items-center pr" href="#" target="_self">
+                      <p style="margin-bottom: 0 !important;"><span>Baby</span> <span style="font-size: 10px; text-align: center;">Newborn-3Y</span></p>
+                      <svg class="icon-select-arrow" width="10" height="10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 12"><polyline fill="none" stroke="currentColor" points="17 2 9.5 10 2 2" fill-rule="evenodd" stroke-width="2" stroke-linecap="square"></polyline></svg>
+                    </a>
+                  </li>
+                  <li class="type__mega menu-item has--children menu-has__offsets">
+                    <a class="lh-1 d-flex align-items-center pr" href="#" target="_self">
+                      <p style="margin-bottom: 0 !important;"><span>Toddlers</span> <span style="font-size: 10px; text-align: center;">2-8Y</span></p>
+                      <span class="label">New</span>
+                      <svg class="icon-select-arrow" width="10" height="10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 12"><polyline fill="none" stroke="currentColor" points="17 2 9.5 10 2 2" fill-rule="evenodd" stroke-width="2" stroke-linecap="square"></polyline></svg>
+                    </a>
+                  </li>
+                  <li class="type__mega menu-item has--children menu-has__offsets">
+                    <a class="lh-1 d-flex align-items-center pr" href="#" target="_self">
+                      <p style="margin-bottom: 0 !important;"><span>Kids</span> <span style="font-size: 10px; text-align: center;">7-14Y</span></p>
+                      <svg class="icon-select-arrow" width="10" height="10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 12"><polyline fill="none" stroke="currentColor" points="17 2 9.5 10 2 2" fill-rule="evenodd" stroke-width="2" stroke-linecap="square"></polyline></svg>
+                    </a>
+                  </li>
+                  <li class="type__simple menu-item">
+                    <a class="lh-1 d-flex align-items-center pr" href="#" target="_self">Shoes</a>
+                  </li>
+                  <li class="type__simple menu-item">
+                    <a class="lh-1 d-flex align-items-center pr" href="#" target="_self">Home & Accessories</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="col-lg-auto col-md-4 col-3 text-end col-item-sidebar lh-1">
+              <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+                <symbol id="icon-h-search" viewBox="0 0 18 19" fill="none">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M11.03 11.68A5.784 5.784 0 112.85 3.5a5.784 5.784 0 018.18 8.18zm.26 1.12a6.78 6.78 0 11.72-.7l5.4 5.4a.5.5 0 11-.71.7l-5.41-5.4z" fill="currentColor"></path>
+                </symbol>
+                <symbol id="icon-h-account" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle>
+                </symbol>
+                <symbol id="icon-h-heart" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </symbol>
+                <symbol id="icon-h-cart" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+               </symbol>
+              </svg>
+              <div class="site-nav__icons">
+                <div class="site-nav__icon site-nav__search">
+                  <a href="/search">
+                    <svg class="icon icon--search" aria-hidden="true" focusable="false" role="presentation"><use href="#icon-h-search"></use></svg>
+                  </a>
+                </div>
+                <div class="site-nav__icon site-nav__account pr d-none d-md-inline-block">
+                  <a href="/account">
+                    <svg class="icon icon--account" aria-hidden="true" focusable="false" role="presentation"><use href="#icon-h-account"></use></svg>
+                  </a>
+                </div>
+                <div class="site-nav__icon site-nav__heart d-none d-md-inline-block">
+                  <a data-link-wishlist="" href="/search/?view=wishlist">
+                    <svg class="icon icon--heart" aria-hidden="true" focusable="false" role="presentation"><use href="#icon-h-heart"></use></svg>
+                    <span data-count-wishlist="" class="count-box">1</span>
+                  </a>
+                </div>
+                <div class="site-nav__icon site-nav__cart">	
+                  <a href="/cart">
+                    <span class="pr icon-cart__wrap">
+                      <svg class="icon icon--cart" aria-hidden="true" focusable="false" role="presentation"><use href="#icon-h-cart"></use></svg>
+                      <span data-cart-count="" class="count-box">0</span>
+                    </span>
+                    </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

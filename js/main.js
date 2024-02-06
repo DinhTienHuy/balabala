@@ -45,6 +45,7 @@ $(document).ready(function () {
   $(".pro-wishlist .pro-icon").on("click", function () {
     $(this).find("i").toggleClass("fas active");
   });
+
   $(".pro-variant .pr-color__item").hover(function (e) {
     e.preventDefault();
     $(".pro-variant .pr-color__item").removeClass("active");
@@ -56,6 +57,7 @@ $(document).ready(function () {
     let productWrapper = $(this).closest(".product-wrapper");
     productWrapper.find(".pro-img a > img").attr("src", pathName);
   });
+
   const calcScrollValue = () => {
     let pos = $(document).scrollTop();
     let calc = $(document).height() - $(window).height();
@@ -71,10 +73,21 @@ $(document).ready(function () {
       `conic-gradient(#000 ${scrollValue}%, #eee ${scrollValue}%)`
     );
   };
+  
   $("#backToTop").on("click", function (e) {
     e.preventDefault();
 
     $("html, body").animate({ scrollTop: 0 }, "slow");
   });
   $(window).scroll(calcScrollValue);
+
+  $(".change-data").click(function () {
+    let idElem = $(this).attr("data-id");
+    if ($("#"+idElem).hasClass('is--opened')) {
+      $("#"+idElem).removeClass("is--opened")
+    } else {
+      $(".current-scrollbar").removeClass("is--opened")
+      $("#"+idElem).addClass("is--opened")
+    }
+  });
 });
