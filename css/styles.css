@@ -773,6 +773,7 @@
     min-width: 100%;
     transform: none;
     overflow: hidden;
+    margin-bottom: 20px;
   }
   .list_slider.block_3 .container-fluid.mobile .slide_item .slide_item_content p {
     padding: 0 20px;
