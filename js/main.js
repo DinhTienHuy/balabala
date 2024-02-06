@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
   $(".list_slider .container").slick({
     slidesToShow: 1,
@@ -7,7 +6,7 @@ $(document).ready(function () {
     prevArrow: `<button type='button' class='slick-prev pull-left'><svg  viewBox="0 0 100 100"><path d="M 10,50 L 60,100 L 65,95 L 20,50  L 65,5 L 60,0 Z" class="arrow"></path></svg></button>`,
     nextArrow: `<button type='button' class='slick-next pull-right'><svg  viewBox="0 0 100 100"><path d="M 10,50 L 60,100 L 65,95 L 20,50  L 65,5 L 60,0 Z" class="arrow" transform="translate(100, 100) rotate(180) "></path></svg></button>`,
   });
-  
+
   $(".list_slider .container").on(
     "afterChange",
     function (event, slick, currentSlide) {
@@ -15,14 +14,14 @@ $(document).ready(function () {
       $(".slide_item .slide_item_content")
         .children()
         .removeClass("animation-fadeInUp");
-  
+
       // Add 'animation' class to the active item
       $(".slick-active .slide_item_content ")
         .children()
         .addClass("animation-fadeInUp");
     }
   );
-  
+
   $(".openModalBtn").click(function () {
     $("#myModal").fadeIn();
   });
@@ -42,4 +41,40 @@ $(document).ready(function () {
       $("#myModal").fadeOut();
     }
   });
+
+  $(".pro-wishlist .pro-icon").on("click", function () {
+    $(this).find("i").toggleClass("fas active");
+  });
+  $(".pro-variant .pr-color__item").hover(function (e) {
+    e.preventDefault();
+    $(".pro-variant .pr-color__item").removeClass("active");
+    $(this).addClass("active");
+    let img = $(this).find(".pr-color__value").css("background-image");
+    let imgUrl = img.match(/url\(['"]?(.*?)['"]?\)/);
+    let urlObject = new URL(imgUrl[1]);
+    let pathName = urlObject.pathname.substring(1);
+    let productWrapper = $(this).closest(".product-wrapper");
+    productWrapper.find(".pro-img a > img").attr("src", pathName);
+  });
+  const calcScrollValue = () => {
+    let pos = $(document).scrollTop();
+    let calc = $(document).height() - $(window).height();
+    let scrollValue = Math.round((pos * 100) / calc);
+    if (pos > 100) {
+      $("#backToTop").css("display", "block");
+    } else {
+      $("#backToTop").css("display", "none");
+    }
+
+    $("#backToTop .circle--bg").css(
+      "background",
+      `conic-gradient(#000 ${scrollValue}%, #eee ${scrollValue}%)`
+    );
+  };
+  $("#backToTop").on("click", function (e) {
+    e.preventDefault();
+
+    $("html, body").animate({ scrollTop: 0 }, "slow");
+  });
+  $(window).scroll(calcScrollValue);
 });

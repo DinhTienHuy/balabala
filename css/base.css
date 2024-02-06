@@ -167,6 +167,7 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -189,7 +190,17 @@ table {
   width: 100%;
   line-height: 1.4;
 }
+/* Ẩn mũi tên điều chỉnh trên tất cả các trình duyệt */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
 
+/* Ẩn mũi tên điều chỉnh trên Chrome và Safari */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 table,
 td,
 th {
