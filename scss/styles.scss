@@ -27,7 +27,7 @@ $border-w: 2px;
 }
 /* slider */
 .list_slider {
-  @media (max-width: 769px) {
+  @media (max-width: 767px) {
     .container.desktop {
       display: none;
     }
@@ -176,7 +176,7 @@ $border-w: 2px;
   }
   .container.mobile {
     display: none;
-    @media (max-width: 769px) {
+    @media (max-width: 767px) {
       display: block;
     }
     .slick-dots {
@@ -198,14 +198,14 @@ $border-w: 2px;
 /*banner*/
 .shopify-section {
   width: 100%;
-  @media (max-width: 769px) {
+  @media (max-width: 767px) {
     .bannner_desktop {
       display: none;
     }
   }
   .bannner_mobile {
     display: none;
-    @media (max-width: 769px) {
+    @media (max-width: 767px) {
       display: block;
     }
   }
@@ -214,7 +214,8 @@ $border-w: 2px;
 /* end slider */
 /*title*/
 .top_heading {
-  margin-bottom: 32px;
+  margin-bottom: 2px;
+
   text-align: center;
   .section_title {
     font-size: 25px;
@@ -226,7 +227,8 @@ $border-w: 2px;
       display: inline-block;
       vertical-align: top;
     }
-    @media (max-width: 769px) {
+
+    @media (max-width: 767px) {
       font-size: 20px;
     }
   }
@@ -237,6 +239,7 @@ $border-w: 2px;
   margin-bottom: 60px;
   margin-top: 60px;
   .product-wrapper {
+    margin-top: 30px;
     .pro-inner {
       position: relative;
       overflow: hidden;
@@ -278,9 +281,7 @@ $border-w: 2px;
           padding: 0 15px;
         }
       }
-    }
-    &:hover {
-      .pro-inner {
+      &:hover {
         .pro-img {
           a {
             img {
@@ -444,8 +445,20 @@ $border-w: 2px;
       }
     }
   }
-
-  @media (max-width: 769px) {
+  @media (max-width: 1199px) {
+    margin-top: 30px;
+    .container {
+      .box-pro {
+        .row {
+          .col-lg-3 {
+            flex: 0 0 auto;
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 767px) {
     margin-top: 30px;
     .row {
       margin-left: -5px;
@@ -493,13 +506,30 @@ $border-w: 2px;
 /* category list  */
 .list_categories {
   margin-top: 10px;
-  @media (max-width: 769px) {
+  @media (max-width: 1199px) {
+    .container {
+      .category_block {
+        .row {
+          .col-lg {
+            flex: 0 0 auto;
+            width: 33.33333333%;
+            .cat-content_img {
+              max-width: 100%;
+              max-height: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 767px) {
     .container {
       padding: 0 15px;
     }
   }
+
   .category_block {
-    @media (max-width: 769px) {
+    @media (max-width: 767px) {
       padding: 20px 10px;
       .row {
         margin-left: -5px;
@@ -571,13 +601,20 @@ $border-w: 2px;
       display: none !important;
     }
   }
+  @media (max-width: 1199px) {
+    .container {
+      .slide_item_content {
+        top: 62%;
+      }
+    }
+  }
 }
 /* end block_2 slide */
 
 /* block_3 slide */
 .list_slider.block_3 {
   overflow: hidden;
-  @media (max-width: 769px) {
+  @media (max-width: 767px) {
     .container-fluid.desktop {
       display: none;
     }
@@ -597,7 +634,7 @@ $border-w: 2px;
       font-weight: 400;
       opacity: 1;
       text-shadow: none;
-      @media (max-width: 769px) {
+      @media (max-width: 767px) {
         font-size: 12px;
         line-height: 16px;
         margin-bottom: 10px;
@@ -606,7 +643,7 @@ $border-w: 2px;
         font-size: 30px;
         font-weight: 600;
         margin-bottom: 25px;
-        @media (max-width: 769px) {
+        @media (max-width: 767px) {
           font-size: 20px;
           line-height: 20px;
           margin-bottom: 10px;
@@ -616,7 +653,7 @@ $border-w: 2px;
   }
   .container-fluid.mobile {
     display: none;
-    @media (max-width: 769px) {
+    @media (max-width: 767px) {
       display: block;
       .slide_item {
         .slide_item_content {
@@ -654,7 +691,15 @@ $border-w: 2px;
 /* block instagram */
 .list_instagram {
   padding: 60px;
-  @media (max-width: 769px) {
+  @media (max-width: 1024px) {
+    .row {
+      .col-lg-3 {
+        flex: 0 0 auto;
+        width: 50%;
+      }
+    }
+  }
+  @media (max-width: 767px) {
     padding: 20px;
   }
   .row {
@@ -945,6 +990,15 @@ footer {
   .section-footer {
     padding-top: 55px;
     padding-bottom: 78px;
+    @media (min-width: 992px) and (max-width: 1024px) {
+      .row {
+        .col-lg-3,
+        .col-lg-15 {
+          flex: 0 0 auto;
+          width: 50%;
+        }
+      }
+    }
     @media (min-width: 992px) {
       .col-lg-15 {
         width: 20%;

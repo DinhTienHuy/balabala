@@ -54,7 +54,7 @@ $(document).ready(function () {
     let urlObject = new URL(imgUrl[1]);
     let pathName = urlObject.pathname.substring(1);
     let productWrapper = $(this).closest(".product-wrapper");
-    productWrapper.find(".pro-img a > img").attr("src", pathName);
+    productWrapper.find(".pro-img a > img.active").attr("src", pathName);
   });
   const calcScrollValue = () => {
     let pos = $(document).scrollTop();
