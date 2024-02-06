@@ -1058,9 +1058,9 @@ footer {
       }
     }
     @media (max-width: 767px) {
-       .col-md-6:first-child {
-              margin-top: 0 !important;
-            }
+      .col-md-6:first-child {
+        margin-top: 0 !important;
+      }
       .footer-wrap {
         padding: 0 10px;
         .footer-mobile {
@@ -1069,6 +1069,7 @@ footer {
           justify-content: space-between;
           h3 {
             margin-bottom: 0 !important;
+            margin-top: 0;
           }
           .footer-collapse-icon {
             width: 12px;

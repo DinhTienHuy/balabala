@@ -1014,6 +1014,7 @@ footer .section-footer {
   }
   footer .section-footer .footer-wrap .footer-mobile h3 {
     margin-bottom: 0 !important;
+    margin-top: 0;
   }
   footer .section-footer .footer-wrap .footer-mobile .footer-collapse-icon {
     width: 12px;
