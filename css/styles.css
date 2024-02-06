@@ -812,9 +812,11 @@
   transform: translate(-50%, -50%) !important;
   animation: modal-opening 0.3s forwards;
 }
-@media (min-width: 769px) {
-  .modal .modal-content .modal-content {
+@media (max-width: 769px) {
+  .modal .modal-content {
     max-height: 90vh;
+    max-width: 345px;
+    left: 45%;
   }
 }
 .modal .modal-content .close {

@@ -852,10 +852,10 @@ $border-w: 2px;
     top: 50%;
     transform: translate(-50%, -50%) !important;
     animation: modal-opening 0.3s forwards;
-    @media (min-width: 769px) {
-      .modal-content {
-        max-height: 90vh;
-      }
+    @media (max-width: 769px) {
+      max-height: 90vh;
+      max-width: 345px;
+      left: 45%;
     }
     .close {
       color: #fff;
