@@ -49,6 +49,7 @@ $border-w: 2px;
         top: 70%;
       }
       h5 {
+        margin-top: 0;
         color: #ffffff;
         cursor: pointer;
         font-size: 62px;
@@ -59,6 +60,7 @@ $border-w: 2px;
         text-shadow: rgba(0, 0, 0, 0.4) 0px 0px 4px;
         margin-bottom: 18px;
         @media (max-width: 767px) {
+          margin-top: 0;
           font-size: 36px;
           line-height: 36px;
           margin-bottom: 6px;
