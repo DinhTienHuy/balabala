@@ -51,6 +51,7 @@
   }
 }
 .list_slider .slide_item .slide_item_content h5 {
+  margin-top: 0;
   color: #ffffff;
   cursor: pointer;
   font-size: 62px;
@@ -63,6 +64,7 @@
 }
 @media (max-width: 767px) {
   .list_slider .slide_item .slide_item_content h5 {
+    margin-top: 0;
     font-size: 36px;
     line-height: 36px;
     margin-bottom: 6px;
