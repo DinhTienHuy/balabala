@@ -1,3 +1,13 @@
+.bala_mb_30 {
+    margin-bottom: 30px
+}
+.bala_mb_20 {
+    margin-bottom: 20px
+}
+.bala_mb_10 {
+    margin-bottom: 10px
+}
+
 .close-overlay {
     position: fixed;
     top: 0;
@@ -20,6 +30,36 @@
 .lock-scroll {
     overflow: hidden;
 }
+
+//sidebar
+.bala-sidebar {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    max-height: none;
+    z-index: 469;
+    transition: transform .5s cubic-bezier(.645, .045, .355, 1),visibility .5s cubic-bezier(.645, .045, .355, 1);
+    background: var(--t4s-light-color);
+    box-shadow: none;
+    touch-action: manipulation;
+    pointer-events: none;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: calc(100vw - 65px);
+    &.is-active {
+        pointer-events: auto;
+        visibility: visible;
+        transform: none;
+        -webkit-transform: none;
+        opacity: 1;
+    }
+    @media screen and (min-width: 641px) {
+        width: 340px;
+    }
+}
+//end sidebar
 header {
     .h-cart__design3 {
         .count-box {

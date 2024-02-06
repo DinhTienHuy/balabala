@@ -119,7 +119,7 @@
               </div>
             </div>
             <div class="col d-none d-lg-block col-item-menu">
-              <nav class="navigation text-start nav__hover_sideup nav-arrow__true">
+              <nav class="navigation nav__hover_sideup nav-arrow__true">
                 <ul class="nav__ul">
                   <li class="type__simple menu-item">
                     <a class="lh-1" href="#" target="_self">Home</a>
@@ -232,7 +232,7 @@
                           </div>
                           <div class="type_mn_pr menu-item sub-column-item col-3 col-item col-image">
                             <div class="collection-item">
-                              <div class="coll-img pr">
+                              <div class="coll-img">
                                 <a class="cat_item_link" href="/collections/baby-boy" target="_self">
                                   <img src="images/image-menu1.webp" width="1000" height="1340" alt="">
                                 </a>
@@ -241,7 +241,7 @@
                           </div>
                           <div class="type_mn_pr menu-item sub-column-item col-3 col-item col-image">
                             <div class="collection-item">
-                              <div class="coll-img pr">
+                              <div class="coll-img">
                                 <a class="cat_item_link" href="/collections/baby-girl" target="_self">
                                   <img src="images/image-menu2.jpeg" width="1000" height="1340" alt="">
                                 </a>
@@ -367,7 +367,7 @@
       </div>
     </header>
 
-    <div id="login-sidebar" class="drawer drawer__right is-active">
+    <div id="login-sidebar" class="bala-sidebar is-active">
       <div class="drawer__header">
         <span class="is--login is-active">LOGIN</span>
         <span class="is--recover">Reset your password</span>
@@ -379,86 +379,88 @@
         </button>
       </div>
       <div class="drawer__content">
-          <div class="drawer__main">
-            <div data-scroll-me="" class="drawer__scroll current-scrollbar">
-              <div id="recover_login-sidebar" class="content-login-sidebar is--recover text-start" aria-hidden="true">
-                <p>Lost your password? Please enter your email address. You will receive a link to create a new password via email.</p>
-                <form method="post" action="/account/recover" id="recover_customer_passwordlogin-sidebar" accept-charset="UTF-8">
-                  <input type="hidden" name="form_type" value="recover_customer_password">
-                  <input type="hidden" name="utf8" value="✓">
-                  <div class="t4s_field pr">
-                    <input type="email" class="t4s_frm_input t4s_mb_30" value="" name="email" id="RecoverEmail" autocorrect="off" autocapitalize="off" autocomplete="email" placeholder="Email address">
-                    <label for="RecoverEmail">
-                      Email address
-                    </label>
-                  </div>
-                  <div class="t4s_field t4s_mb_20">
-                    <button class="t4s_btn_submmit btn btn-base btn-full-width btn-style-default btn-size-medium btn-color-primary btn-effect-default">Reset Password</button>
-                  </div>
-                  <a class="d-inline-block" data-login-sidebar="login" href="#login_login-sidebar">Cancel </a>
-                </form>
-              </div>
+        <div class="drawer__main">
+          <div class="drawer__scroll current-scrollbar">
+            <div id="login_login-sidebar" class="content-login-sidebar is--login" aria-hidden="false">
+              <form method="post" action="/account/login" id="customer_loginlogin-sidebar" accept-charset="UTF-8" data-login-with-shop-sign-in="true" novalidate="novalidate">
+                <input type="hidden" name="form_type" value="customer_login">
+                <input type="hidden" name="utf8" value="✓">
+                <input type="hidden" name="checkout_url" value="/">
+                <div class="bala_field pr bala_mb_30">        
+                  <input class="bala_frm_input" type="email" name="customer[email]" id="CustomerEmail" autocomplete="email" autocorrect="off" autocapitalize="off" placeholder="Email">
+                  <label for="CustomerEmail">
+                    Email <span class="required">*</span>
+                  </label>
+                </div>
+                <div class="bala_field pr bala_mb_10">          
+                  <input class="bala_frm_input" type="password" value="" name="customer[password]" id="CustomerPassword" autocomplete="current-password" placeholder="Password">
+                  <label for="CustomerPassword">
+                    Password <span class="required">*</span>
+                  </label>
+                </div>
 
-              <div id="login_login-sidebar" class="content-login-sidebar is--login text-start" aria-hidden="false">
-                <form method="post" action="/account/login" id="customer_loginlogin-sidebar" accept-charset="UTF-8" data-login-with-shop-sign-in="true" novalidate="novalidate">
-                  <input type="hidden" name="form_type" value="customer_login"><input type="hidden" name="utf8" value="✓"><input type="hidden" name="checkout_url" value="/">
-                  <div class="t4s_field pr t4s_mb_30">        
-                    <input class="t4s_frm_input" type="email" name="customer[email]" id="CustomerEmail" autocomplete="email" autocorrect="off" autocapitalize="off" placeholder="Email">
-                    <label for="CustomerEmail">
-                      Email <span class="required">*</span>
-                    </label>
-                  </div>
-                  <div class="t4s_field pr t4s_mb_10">          
-                    <input class="t4s_frm_input" type="password" value="" name="customer[password]" id="CustomerPassword" autocomplete="current-password" placeholder="Password">
-                    <label for="CustomerPassword">
-                      Password <span class="required">*</span>
-                    </label>
-                  </div>
+                <div class="button-action bala_mb_30"  data-login-sidebar="recover">Forgot your password?</div>
+                <div class="bala_field bala_mb_20">
+                  <button class="bala_btn_submmit">Sign In</button>
+                </div>
+                <div class="button-action bala_mb_30" data-login-sidebar="create"> New customer? Create your account</div>
+              </form>
+            </div>
 
-                  <a href="#recover_login-sidebar" data-login-sidebar="recover" class="d-block t4s_mb_30">Forgot your password?</a>
-                  <div class="t4s_field t4s_mb_20">
-                    <button class="t4s_btn_submmit btn btn-base btn-full-width btn-style-default btn-size-medium btn-color-primary btn-effect-default">Sign In</button>
-                  </div>
-                  <a class="d-inline-block" data-login-sidebar="create" href="/account/register"> New customer? Create your account</a>
-                </form>
-              </div>
+            <div id="create_login-sidebar" class="content-login-sidebar is--create">
+              <form class="w-100" method="post" action="/account" id="customer_createlogin-sidebar" accept-charset="UTF-8" data-login-with-shop-sign-up="true" novalidate="novalidate">
+                <input type="hidden" name="form_type" value="create_customer">
+                <input type="hidden" name="utf8" value="✓">
+                <div class="bala_field pr bala_mb_30">      
+                  <input class="bala_frm_input" type="text" name="customer[first_name]" id="RegisterForm-FirstName" autocomplete="given-name" placeholder="First Name">
+                  <label for="RegisterForm-FirstName">
+                    First Name
+                  </label>
+                </div>
+                <div class="bala_field pr bala_mb_30">
+                  <input class="bala_frm_input" type="text" name="customer[last_name]" id="RegisterForm-LastName" autocomplete="family-name" placeholder="Last Name">
+                  <label for="RegisterForm-LastName">
+                    Last Name
+                  </label>
+                </div>
+                <div class="bala_field pr bala_mb_30">
+                  <input class="bala_frm_input" type="email" name="customer[email]" id="RegisterForm-email" spellcheck="false" autocapitalize="off" autocomplete="email" aria-required="true" placeholder="Email">
+                  <label for="RegisterForm-email">
+                    Email <span class="required">*</span>
+                  </label>
+                </div>
+                <div class="bala_field pr bala_mb_30">     
+                  <input class="bala_frm_input" type="password" name="customer[password]" id="RegisterForm-password" aria-required="true" placeholder="Password">
+                  <label for="RegisterForm-password">
+                    Password <span class="required">*</span>
+                  </label>
+                </div>
+                <div class="bala_field bala_mb_20">
+                  <button class="bala_btn_submmit btn btn-base btn-full-width btn-style-default btn-size-medium btn-color-primary btn-effect-default">Register</button>
+                </div>
+                <div class="button-action" data-login-sidebar="login"> Already have an account? Login here</div>
+              </form>
+            </div>
 
-              <div id="create_login-sidebar" class="content-login-sidebar is--create text-start" data-showing="create" aria-hidden="true">
-                <form  class="w-100" method="post" action="/account" id="customer_createlogin-sidebar" accept-charset="UTF-8" data-login-with-shop-sign-up="true" novalidate="novalidate">
-                  <input type="hidden" name="form_type" value="create_customer">
-                  <input type="hidden" name="utf8" value="✓">
-                  <div class="t4s_field pr t4s_mb_30">      
-                    <input class="t4s_frm_input" type="text" name="customer[first_name]" id="RegisterForm-FirstName" autocomplete="given-name" placeholder="First Name">
-                    <label for="RegisterForm-FirstName">
-                      First Name
-                    </label>
-                  </div>
-                  <div class="t4s_field pr t4s_mb_30">
-                    <input class="t4s_frm_input" type="text" name="customer[last_name]" id="RegisterForm-LastName" autocomplete="family-name" placeholder="Last Name">
-                    <label for="RegisterForm-LastName">
-                      Last Name
-                    </label>
-                  </div>
-                  <div class="t4s_field pr t4s_mb_30">
-                    <input class="t4s_frm_input" type="email" name="customer[email]" id="RegisterForm-email" spellcheck="false" autocapitalize="off" autocomplete="email" aria-required="true" placeholder="Email">
-                    <label for="RegisterForm-email">
-                      Email <span class="required">*</span>
-                    </label>
-                  </div>
-                  <div class="t4s_field pr t4s_mb_30">     
-                    <input class="t4s_frm_input" type="password" name="customer[password]" id="RegisterForm-password" aria-required="true" placeholder="Password">
-                    <label for="RegisterForm-password">
-                      Password <span class="required">*</span>
-                    </label>
-                  </div>
-                  <div class="t4s_field t4s_mb_20">
-                    <button class="t4s_btn_submmit btn btn-base btn-full-width btn-style-default btn-size-medium btn-color-primary btn-effect-default">Register</button>
-                  </div>
-                  <a class="d-inline-block" data-login-sidebar="login" href="/account/login"> Already have an account? Login here</a>
-                </form>
-              </div>
+            <div id="recover_login-sidebar" class="content-login-sidebar is--recover">
+              <p>Lost your password? Please enter your email address. You will receive a link to create a new password via email.</p>
+              <form method="post" action="/account/recover" id="recover_customer_passwordlogin-sidebar" accept-charset="UTF-8">
+                <input type="hidden" name="form_type" value="recover_customer_password">
+                <input type="hidden" name="utf8" value="✓">
+                <div class="bala_field pr">
+                  <input type="email" class="bala_frm_input bala_mb_30" value="" name="email" id="RecoverEmail" autocorrect="off" autocapitalize="off" autocomplete="email" placeholder="Email address">
+                  <label for="RecoverEmail">
+                    Email address
+                  </label>
+                </div>
+                <div class="bala_field bala_mb_20">
+                  <button class="bala_btn_submmit btn btn-base btn-full-width btn-style-default btn-size-medium btn-color-primary btn-effect-default">Reset Password</button>
+                </div>
+                <div class="button-action" data-login-sidebar="login">Cancel</div>
+              </form>
             </div>
           </div>
+        </div>
       </div>
     </div>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
