@@ -58,6 +58,13 @@ $(document).ready(function () {
     productWrapper.find(".pro-img a > img.active").attr("src", pathName);
   });
 
+<<<<<<< HEAD
+=======
+  $(".footer-wrap").click(function () {
+    $(this).toggleClass("is--footer_opened");
+    $(this).find(".footer-content").slideToggle();
+  });
+>>>>>>> nhiệm
   const calcScrollValue = () => {
     let pos = $(document).scrollTop();
     let calc = $(document).height() - $(window).height();
