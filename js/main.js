@@ -56,6 +56,11 @@ $(document).ready(function () {
     let productWrapper = $(this).closest(".product-wrapper");
     productWrapper.find(".pro-img a > img.active").attr("src", pathName);
   });
+
+  $(".footer-wrap").click(function () {
+    $(this).toggleClass("is--footer_opened");
+    $(this).find(".footer-content").slideToggle();
+  });
   const calcScrollValue = () => {
     let pos = $(document).scrollTop();
     let calc = $(document).height() - $(window).height();
