@@ -91,6 +91,9 @@ header .top-bar .top-bar__wrap .top-bar__cur .top-bar__currencies .dropdown__wra
   transform: translateY(0);
   display: block;
 }
+header .center-header {
+  position: relative;
+}
 header .center-header .wrapper-center-header {
   align-items: center;
   min-height: 70px;
@@ -109,6 +112,29 @@ header .center-header .wrapper-center-header .col-item-logo .header__logo img {
   max-height: inherit;
   height: auto;
   max-width: 100%;
+}
+header .center-header .wrapper-center-header .col-item-menu .type__mega .sub-menu {
+  position: absolute;
+  min-width: 250px;
+  background-color: #ffffff;
+  top: 100%;
+  z-index: 101;
+  -webkit-box-shadow: inset 0 0 0 1px #eaeaea, 0 5px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 0 0 1px #eaeaea, 0 5px 20px rgba(0, 0, 0, 0.1490196078);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1490196078);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none !important;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 20px 15px;
+  width: 100vw;
+  -webkit-transform: translateY(15px) translateZ(0);
+  transform: translateY(15px) translateZ(0);
+  transition: opacity 0.2s, visibility 0.2s, transform 0.2s, -webkit-transform 0.2s;
+  left: 0;
+  max-width: 100vw;
+  max-height: var(--max-height, 75vh);
 }
 header .center-header .wrapper-center-header .col-item-sidebar {
   text-align: end;

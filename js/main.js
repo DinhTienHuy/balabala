@@ -53,7 +53,7 @@ $(document).ready(function () {
     let img = $(this).find(".pr-color__value").css("background-image");
     let imgUrl = img.match(/url\(['"]?(.*?)['"]?\)/);
     let urlObject = new URL(imgUrl[1]);
-    let pathName = urlObject.pathname.substring(1);
+    let pathName = urlObject.pathname;
     let productWrapper = $(this).closest(".product-wrapper");
     productWrapper.find(".pro-img a > img").attr("src", pathName);
   });
@@ -73,7 +73,7 @@ $(document).ready(function () {
       `conic-gradient(#000 ${scrollValue}%, #eee ${scrollValue}%)`
     );
   };
-  
+
   $("#backToTop").on("click", function (e) {
     e.preventDefault();
 
@@ -89,5 +89,12 @@ $(document).ready(function () {
       $(".current-scrollbar").removeClass("is--opened")
       $("#"+idElem).addClass("is--opened")
     }
+  });
+
+  let height = window.innerHeight;
+  $('header').css("--max-height", (height*32)/100+"px");
+  $(window).resize(function(){
+    let height = window.innerHeight;
+    $('header').css("--max-height", (height*32)/100+"px");
   });
 });
