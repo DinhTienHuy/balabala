@@ -58,13 +58,11 @@ $(document).ready(function () {
     productWrapper.find(".pro-img a > img.active").attr("src", pathName);
   });
 
-<<<<<<< HEAD
-=======
   $(".footer-wrap").click(function () {
     $(this).toggleClass("is--footer_opened");
     $(this).find(".footer-content").slideToggle();
   });
->>>>>>> nhiệm
+
   const calcScrollValue = () => {
     let pos = $(document).scrollTop();
     let calc = $(document).height() - $(window).height();
@@ -80,7 +78,7 @@ $(document).ready(function () {
       `conic-gradient(#000 ${scrollValue}%, #eee ${scrollValue}%)`
     );
   };
-  
+
   $("#backToTop").on("click", function (e) {
     e.preventDefault();
 
@@ -90,11 +88,11 @@ $(document).ready(function () {
 
   $(".change-data").click(function () {
     let idElem = $(this).attr("data-id");
-    if ($("#"+idElem).hasClass('is--opened')) {
-      $("#"+idElem).removeClass("is--opened")
+    if ($("#" + idElem).hasClass("is--opened")) {
+      $("#" + idElem).removeClass("is--opened");
     } else {
-      $(".current-scrollbar").removeClass("is--opened")
-      $("#"+idElem).addClass("is--opened")
+      $(".current-scrollbar").removeClass("is--opened");
+      $("#" + idElem).addClass("is--opened");
     }
   });
 });
