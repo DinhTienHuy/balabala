@@ -58,9 +58,9 @@ $(document).ready(function () {
     productWrapper.find(".pro-img a > img.active").attr("src", pathName);
   });
 
-  $(".footer-wrap").click(function () {
-    $(this).toggleClass("is--footer_opened");
-    $(this).find(".footer-content").slideToggle();
+  $(".footer-mobile").click(function () {
+    $(this).closest(".footer-wrap").toggleClass("is--footer_opened");
+    $(this).closest(".footer-wrap").find(".footer-content").slideToggle();
   });
 
   const calcScrollValue = () => {
