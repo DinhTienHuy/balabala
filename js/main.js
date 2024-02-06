@@ -92,9 +92,9 @@ $(document).ready(function () {
   });
 
   let height = window.innerHeight;
-  $('header').css("--max-height", (height*32)/100+"px");
+  $('header').css("--max-height", height-150+"px");
   $(window).resize(function(){
     let height = window.innerHeight;
-    $('header').css("--max-height", (height*32)/100+"px");
+    $('header').css("--max-height", height-150+"px");
   });
 });
