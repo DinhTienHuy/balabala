@@ -702,30 +702,9 @@
 .list_slider.block_3 {
   overflow: hidden;
 }
-@media (max-width: 767px) {
-  .list_slider.block_3 .container-fluid.desktop {
-    display: none;
-  }
-  .list_slider.block_3 .container-fluid.mobile {
-    display: block;
-    padding: 0;
-  }
-}
 .list_slider.block_3 .slide_item_content {
   left: 32.5%;
   text-align: start;
-}
-@media (max-width: 1199px) {
-  .list_slider.block_3 .slide_item_content {
-    left: 37.2%;
-  }
-  .list_slider.block_3 .slide_item_content p.title {
-    font-size: 20px !important;
-    margin: 0 !important;
-  }
-  .list_slider.block_3 .slide_item_content p {
-    margin: 0 !important;
-  }
 }
 .list_slider.block_3 .slide_item_content p {
   color: #222222;
@@ -737,24 +716,10 @@
   opacity: 1;
   text-shadow: none;
 }
-@media (max-width: 767px) {
-  .list_slider.block_3 .slide_item_content p {
-    font-size: 12px;
-    line-height: 16px;
-    margin-bottom: 10px;
-  }
-}
 .list_slider.block_3 .slide_item_content p.title {
   font-size: 30px;
   font-weight: 600;
   margin-bottom: 25px;
-}
-@media (max-width: 767px) {
-  .list_slider.block_3 .slide_item_content p.title {
-    font-size: 20px;
-    line-height: 20px;
-    margin-bottom: 10px;
-  }
 }
 .list_slider.block_3 .container-fluid.mobile {
   display: none;
@@ -790,6 +755,37 @@
 }
 .list_slider.block_3 .container-fluid.mobile .slick-dots {
   display: none !important;
+}
+@media (max-width: 1199px) {
+  .list_slider.block_3 .slide_item_content {
+    left: 37.2%;
+  }
+  .list_slider.block_3 .slide_item_content p.title {
+    font-size: 20px;
+    margin: 0;
+  }
+  .list_slider.block_3 .slide_item_content p {
+    margin: 0;
+  }
+}
+@media (max-width: 767px) {
+  .list_slider.block_3 .container-fluid.desktop {
+    display: none;
+  }
+  .list_slider.block_3 .container-fluid.mobile {
+    display: block;
+    padding: 0;
+  }
+  .list_slider.block_3 .slide_item_content p {
+    font-size: 12px;
+    line-height: 16px;
+    margin-bottom: 10px;
+  }
+  .list_slider.block_3 .slide_item_content p.title {
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 10px;
+  }
 }
 
 /* end block_3 slide */
@@ -1069,8 +1065,12 @@
 
 /*footer*/
 footer {
-  margin-bottom: 55px;
   background-color: #f5f6f6;
+}
+@media (max-width: 1199px) {
+  footer {
+    margin-bottom: 55px;
+  }
 }
 footer .section-footer {
   padding-top: 55px;
@@ -1340,7 +1340,7 @@ footer .section-bottom-bar .bl-bt-bar-2 .ft-style2 .ft-linklist li a:hover {
 .section-back_top #backToTop {
   display: none;
   right: 40px;
-  bottom: 55px;
+  bottom: 65px;
   cursor: pointer;
   pointer-events: none;
   transition: 0.25s;
@@ -1402,7 +1402,9 @@ footer .section-bottom-bar .bl-bt-bar-2 .ft-style2 .ft-linklist li a:hover {
   background: #fff;
   height: 55px;
   width: 100%;
-  z-index: 1000;
+  z-index: 190;
+  box-shadow: 0 0 9px rgba(0, 0, 0, 0.1215686275);
+  transition: transform 0.25s;
   display: none;
 }
 @media (max-width: 1024px) {
