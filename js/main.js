@@ -43,10 +43,12 @@ $(document).ready(function () {
     }
   });
 
+  //heart wishlist
   $(".pro-wishlist .pro-icon").on("click", function () {
     $(this).find("i").toggleClass("fas active");
   });
 
+  //change image in product list
   $(".pro-variant .pr-color__item").hover(function (e) {
     e.preventDefault();
     $(".pro-variant .pr-color__item").removeClass("active");
@@ -59,11 +61,17 @@ $(document).ready(function () {
     productWrapper.find(".pro-img a > img.active").attr("src", pathName);
   });
 
+
+  //show hide menu mobile
   $(".footer-mobile").click(function () {
     $(this).closest(".footer-wrap").toggleClass("is--footer_opened");
     $(this).closest(".footer-wrap").find(".footer-content").slideToggle();
   });
 
+
+  //button back to top
+  var lastScrollTop = 0;
+  let status = false
   const calcScrollValue = () => {
     let pos = $(document).scrollTop();
     let calc = $(document).height() - $(window).height();
@@ -78,6 +86,28 @@ $(document).ready(function () {
       "background",
       `conic-gradient(#000 ${scrollValue}%, #eee ${scrollValue}%)`
     );
+
+    //sticky header
+    if (pos > lastScrollTop) {
+      if (pos > 130) {
+        status = true
+        $('header').addClass('header-sticky')
+        $('header').addClass('section-header-hidden')
+      }
+    } else {
+      if (status === true) {
+        $('header').removeClass('section-header-hidden')
+        $('header').addClass('animation')
+        status = false
+      }
+    }
+    if (pos < 40) {
+      if ($("header").hasClass('header-sticky')) $('header').removeClass('header-sticky')
+      if ($("header").hasClass('section-header-hidden')) $('header').removeClass('section-header-hidden')
+      if ($("header").hasClass('animation')) $('header').removeClass('animation')
+    }
+    console.log(lastScrollTop)
+    lastScrollTop = pos;
   };
 
   $("#backToTop").on("click", function (e) {
@@ -87,6 +117,8 @@ $(document).ready(function () {
   });
   $(window).scroll(calcScrollValue);
 
+
+  //show hide dropdown lang and cur
   $(".change-data").click(function () {
     let idElem = $(this).attr("data-id");
     if ($("#" + idElem).hasClass("is--opened")) {
@@ -151,6 +183,8 @@ $(document).ready(function () {
   });
 
   /*end*/
+
+  //get height window
   let height = window.innerHeight;
   $('header').css("--max-height", height-150+"px");
   $(window).resize(function(){
@@ -158,7 +192,10 @@ $(document).ready(function () {
     $('header').css("--max-height", height-150+"px");
   });
 
-  $(".action-sidebar").click(function () {
+
+  //open left and right sidebar
+  $(".action-sidebar").click(function (e) {
+    e.preventDefault();
     let idElem = $(this).attr("data-action");
 
     $(".bala-sidebar").removeClass("is-active")
@@ -170,6 +207,7 @@ $(document).ready(function () {
 
   });
 
+  //close left and right sidebar
   $(".close-overlay, .drawer__close, .drawer-menu__close").click(function () {
     $(".close-overlay.is--visible").removeClass("is--visible")
     $(".bala-sidebar").removeClass("is-active")
@@ -177,6 +215,7 @@ $(document).ready(function () {
     if ($(".drawer-menu__close").hasClass("is--active")) $(".drawer-menu__close").removeClass("is--active")
   });
 
+  // Js sidebar login
   $(".button-action").click(function () {
     let idElem = $(this).attr("data-login-sidebar");
 
@@ -184,6 +223,7 @@ $(document).ready(function () {
     $(".is--"+idElem).addClass("is-active")
   });
 
+// Js sidebar mini cart
   $(".mini_cart_tool_btn").click(function () {
     let idElem = $(this).attr("data-id");
     $("#cart-sidebar").toggleClass("is--contentUpdate");
@@ -204,6 +244,7 @@ $(document).ready(function () {
     }
   });
 
+  // Js sidebar mini cart close popup in mini cart
   $(".mini_cart-tool__back, .overlay-cart").click(function () {
     if ($("#cart-sidebar").hasClass("is--contentUpdate")) {
       $("#cart-sidebar").removeClass("is--contentUpdate");
@@ -211,6 +252,8 @@ $(document).ready(function () {
     }
   });
 
+
+  // Js change tab mobile menu
   $(".mb-tab__title").click(function () {
     let idElem = $(this).attr("data-id");
     $(".mb-tab__title, .mb-tab__content").removeClass("is--active")
@@ -218,6 +261,7 @@ $(document).ready(function () {
     $(idElem).addClass("is--active")
   });
 
+  // Js show hide sub menu
   $(".menu-item-has-children").click(function () {
     let currentElm = $(this);
     if (!currentElm.hasClass('is--opend')) {
@@ -226,5 +270,4 @@ $(document).ready(function () {
       currentElm.removeClass("is--opend").find(".sub-menu").hide(300)
     }
   });
-
 });

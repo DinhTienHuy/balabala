@@ -736,26 +736,7 @@ $border-w: 2px;
 /* block_3 slide */
 .list_slider.block_3 {
   overflow: hidden;
-  @media (max-width: 767px) {
-    .container-fluid.desktop {
-      display: none;
-    }
-    .container-fluid.mobile {
-      display: block;
-      padding: 0;
-    }
-  }
   .slide_item_content {
-    @media (max-width: 1199px) {
-      left: 37.2%;
-      p.title {
-        font-size: 20px !important;
-        margin: 0 !important;
-      }
-      p {
-        margin: 0 !important;
-      }
-    }
     left: 32.5%;
     text-align: start;
     p {
@@ -767,20 +748,10 @@ $border-w: 2px;
       font-weight: 400;
       opacity: 1;
       text-shadow: none;
-      @media (max-width: 767px) {
-        font-size: 12px;
-        line-height: 16px;
-        margin-bottom: 10px;
-      }
       &.title {
         font-size: 30px;
         font-weight: 600;
         margin-bottom: 25px;
-        @media (max-width: 767px) {
-          font-size: 20px;
-          line-height: 20px;
-          margin-bottom: 10px;
-        }
       }
     }
   }
@@ -819,6 +790,39 @@ $border-w: 2px;
     }
     .slick-dots {
       display: none !important;
+    }
+  }
+  @media (max-width: 1199px) {
+    .slide_item_content {
+      left: 37.2%;
+      p.title {
+        font-size: 20px;
+        margin: 0;
+      }
+      p {
+        margin: 0;
+      }
+    }
+  }
+  @media (max-width: 767px) {
+    .container-fluid.desktop {
+      display: none;
+    }
+    .container-fluid.mobile {
+      display: block;
+      padding: 0;
+    }
+    .slide_item_content { 
+      p {
+        font-size: 12px;
+        line-height: 16px;
+        margin-bottom: 10px;
+        &.title {
+          font-size: 20px;
+          line-height: 20px;
+          margin-bottom: 10px;
+        }
+      }
     }
   }
 }
@@ -1122,8 +1126,10 @@ $border-w: 2px;
 
 /*footer*/
 footer {
-  margin-bottom: 55px;
   background-color: #f5f6f6;
+  @media (max-width: 1199px) {
+    margin-bottom: 55px;
+  }
   .section-footer {
     padding-top: 55px;
     padding-bottom: 78px;
@@ -1438,7 +1444,7 @@ footer {
   #backToTop {
     display: none;
     right: 40px;
-    bottom: 55px;
+    bottom: 65px;
     cursor: pointer;
     pointer-events: none;
     transition: 0.25s;
@@ -1501,7 +1507,9 @@ footer {
   background: #fff;
   height: 55px;
   width: 100%;
-  z-index: 1000;
+  z-index: 190;
+  box-shadow: 0 0 9px #0000001f;
+  transition: transform .25s;
   @media (max-width: 1024px) {
     display: block;
   }

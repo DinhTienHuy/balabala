@@ -79,6 +79,7 @@ html {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -92,6 +93,7 @@ body {
   text-rendering: optimizeLegibility;
   line-height: 1.6;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 table {
