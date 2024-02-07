@@ -837,7 +837,7 @@ ul {
     width: 100%;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1025px) {
   .col-lg {
     flex: 1 0 0%;
   }
@@ -1123,6 +1123,10 @@ ul {
   display: none;
 }
 @media (min-width: 1025px) {
+  .col-lg-4-custom {
+    flex: 0 0 auto;
+    width: 33.33333333%;
+  }
   .d-lg-none {
     display: none;
   }
