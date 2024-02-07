@@ -97,4 +97,74 @@ $(document).ready(function () {
     let height = window.innerHeight;
     $('header').css("--max-height", height-150+"px");
   });
+
+  $(".action-sidebar").click(function () {
+    let idElem = $(this).attr("data-action");
+
+    $(".bala-sidebar").removeClass("is-active")
+    $(".close-overlay").addClass("is--visible")
+    $("body").addClass("lock-scroll")
+    $("#"+idElem).addClass("is-active")
+
+    if (idElem == "menu-mobile") $(".drawer-menu__close").addClass("is--active")
+
+  });
+
+  $(".close-overlay, .drawer__close, .drawer-menu__close").click(function () {
+    $(".close-overlay.is--visible").removeClass("is--visible")
+    $(".bala-sidebar").removeClass("is-active")
+    $("body").removeClass("lock-scroll")
+    if ($(".drawer-menu__close").hasClass("is--active")) $(".drawer-menu__close").removeClass("is--active")
+  });
+
+  $(".button-action").click(function () {
+    let idElem = $(this).attr("data-login-sidebar");
+
+    $(".content-login-sidebar, .title-sidebar").removeClass("is-active")
+    $(".is--"+idElem).addClass("is-active")
+  });
+
+  $(".mini_cart_tool_btn").click(function () {
+    let idElem = $(this).attr("data-id");
+    $("#cart-sidebar").toggleClass("is--contentUpdate");
+
+    if (idElem == "note") {
+      $(".mini_cart-tool__content.is--note").addClass('is--opend')
+      $(".txt_add_note").removeClass("d-none")
+      $(".txt_edit_note").addClass("d-none")
+    }
+    if (idElem == "edit") {
+      $(".mini_cart-tool__content.is--note").addClass('is--opend');
+      $(".txt_edit_note").removeClass("d-none")
+      $(".txt_add_note").addClass("d-none")
+    }
+
+    if (idElem == "discount") {
+      $(".mini_cart-tool__content.is--discount").addClass('is--opend');
+    }
+  });
+
+  $(".mini_cart-tool__back, .overlay-cart").click(function () {
+    if ($("#cart-sidebar").hasClass("is--contentUpdate")) {
+      $("#cart-sidebar").removeClass("is--contentUpdate");
+      $(".mini_cart-tool__content").removeClass('is--opend')
+    }
+  });
+
+  $(".mb-tab__title").click(function () {
+    let idElem = $(this).attr("data-id");
+    $(".mb-tab__title, .mb-tab__content").removeClass("is--active")
+    $(this).addClass("is--active")
+    $(idElem).addClass("is--active")
+  });
+
+  $(".menu-item-has-children").click(function () {
+    let currentElm = $(this);
+    if (!currentElm.hasClass('is--opend')) {
+      currentElm.addClass("is--opend").find(".sub-menu").show(300)
+    } else {
+      currentElm.removeClass("is--opend").find(".sub-menu").hide(300)
+    }
+  });
+
 });
