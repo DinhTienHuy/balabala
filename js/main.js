@@ -32,6 +32,7 @@ $(document).ready(function () {
 
   $(window).click(function (event) {
     if (event.target.id === "myModal") {
+      console.log(event.target);
       $("#myModal").fadeOut();
     }
   });
@@ -95,4 +96,59 @@ $(document).ready(function () {
       $("#" + idElem).addClass("is--opened");
     }
   });
+
+  /*page Product Category*/
+  $(".btn-filter").on("click", function (e) {
+    e.preventDefault();
+    if ($(window).width() > 767) {
+      $(".filter-area").slideToggle();
+    } else {
+      $(".filter-native").addClass("active");
+      $(".close-overlay").addClass("is--visible");
+      $(document).keyup(function (e) {
+        if (e.key === "Escape") {
+          $("#draw").addClass("in-active");
+          $(".close-overlay").removeClass("is--visible");
+        }
+      });
+      $(window).click(function (event) {
+        if (event.target.id === "close-overlay") {
+          $("#draw").removeClass("active");
+          $(".close-overlay").removeClass("is--visible");
+        }
+      });
+      $(".drawer__close").click(function (event) {
+        $("#draw").removeClass("active");
+        $(".close-overlay").removeClass("is--visible");
+      });
+    }
+  });
+
+  $(".dropdown__sortby").on("click", function () {
+    if ($(window).width() > 766) {
+      $(this).find(".dropdown__wrapper").toggleClass("active");
+      $(this).find("button svg").toggleClass("active");
+    } else {
+      $(".dropdown-mobile").addClass("active");
+      $(".close-overlay").addClass("is--visible");
+      $(document).keyup(function (e) {
+        if (e.key === "Escape") {
+          $("#dropdown-mobile").removeClass("active");
+          $(".close-overlay").removeClass("is--visible");
+        }
+      });
+      $(window).click(function (event) {
+        if (event.target.id === "close-overlay") {
+          $("#dropdown-mobile").removeClass("active");
+          $(".close-overlay").removeClass("is--visible");
+        }
+      });
+      $("#dropdown_close").click(function (event) {
+        $("#dropdown-mobile").removeClass("active");
+        $(".close-overlay").removeClass("is--visible");
+      });
+    }
+  });
+
+  /*end*/
 });
