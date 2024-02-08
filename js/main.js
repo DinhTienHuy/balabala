@@ -107,7 +107,10 @@ $(document).ready(function () {
       if ($("header").hasClass("animation"))
         $("header").removeClass("animation");
     }
+<<<<<<< HEAD
     console.log(lastScrollTop);
+=======
+>>>>>>> main
     lastScrollTop = pos;
   };
 
