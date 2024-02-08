@@ -133,6 +133,8 @@ $(document).ready(function () {
   $(".layout__switch button").click(function (e) {
     e.preventDefault();
     let col = $(this).data("col");
+    $(".layout__switch button").removeClass("active");
+    $(this).addClass("active");
     $(".list_product .row > .col-6").removeClass(function (index, className) {
       var classes = className.split(" ");
       var filteredClasses = classes.filter(function (c) {

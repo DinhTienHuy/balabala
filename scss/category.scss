@@ -1499,3 +1499,75 @@ footer {
   }
 }
 /*end-footer*/
+/*top bar bt*/
+.shopify-section-toolbar_mobile {
+  position: fixed;
+  bottom: 0;
+  background: #fff;
+  height: 55px;
+  width: 100%;
+  z-index: 190;
+  box-shadow: 0 0 9px #0000001f;
+  transition: transform 0.25s;
+  @media (max-width: 1024px) {
+    display: block;
+  }
+  display: none;
+  .toolbar {
+    padding: 5px;
+    .toolbar-item {
+      text-align: center;
+      position: relative;
+      a {
+        padding-right: 10px;
+        padding-left: 10px;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+        height: 45px;
+        font-weight: 400;
+        line-height: 1;
+        position: relative;
+        padding-bottom: 15px;
+        .toolbar-label {
+          position: absolute;
+          bottom: 5px;
+          display: block;
+          text-align: center;
+          font-weight: 600;
+          font-size: 11px;
+          line-height: 1;
+          color: #333333;
+        }
+        .toolbar-icon {
+          position: relative;
+          color: #333333;
+          svg {
+            width: 20px;
+            height: 20px;
+          }
+          .count-box {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            letter-spacing: 0;
+            font-weight: 400;
+            font-size: 10px;
+            line-height: 15px;
+            box-shadow: 1px 1px 3px #0000004d;
+            opacity: 1;
+            transition: 0.3s ease-in-out;
+            background-color: #ffc556;
+            color: #ffffff;
+            text-align: center;
+            border-radius: 50%;
+            top: -5px;
+            right: -9px;
+          }
+        }
+      }
+    }
+  }
+}
+/*end*/
