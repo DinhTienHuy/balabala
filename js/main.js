@@ -130,6 +130,18 @@ $(document).ready(function () {
   });
 
   /*page Product Category*/
+  $(".layout__switch button").click(function (e) {
+    e.preventDefault();
+    let col = $(this).data("col");
+    $(".list_product .row > .col-6").removeClass(function (index, className) {
+      var classes = className.split(" ");
+      var filteredClasses = classes.filter(function (c) {
+        return c.startsWith("col-item-");
+      });
+      return filteredClasses.join(" ");
+    });
+    $(".list_product .row > .col-6").addClass(`col-item-${col}`);
+  });
   $(".btn-filter").on("click", function (e) {
     e.preventDefault();
     if ($(window).width() > 767) {
@@ -182,6 +194,17 @@ $(document).ready(function () {
     }
   });
   //page details
+  //ẩn hiện sitcky bót tom
+  $(document).scroll(function () {
+    if (
+      $(this).scrollTop() >= 300 &&
+      $(this).scrollTop() + $(window).height() < $(document).height() - 55
+    ) {
+      $(".sticky-atc").addClass("is--shown");
+    } else {
+      $(".sticky-atc").removeClass("is--shown");
+    }
+  });
   function shakeButton() {
     $("#shakingButton").addClass("shake");
     setTimeout(function () {
@@ -231,8 +254,8 @@ $(document).ready(function () {
     let imgUrl = img.match(/url\(['"]?(.*?)['"]?\)/);
     let urlObject = new URL(imgUrl[1]);
     let pathName = urlObject.pathname;
-    let stickyBt = $(this).closest("body").f;
-    productWrapper.find(".pro-img a > img.active").attr("src", pathName);
+    let stickyBt = $(this).closest("body").find(".sticky-atc__product");
+    stickyBt.find(".sticky-atc__img img").attr("src", pathName);
     $(".is-name__color .swatch_item").removeClass("active");
     $(this).addClass("active");
     $(this).closest(".product__info-container").find(".sku-value").html(sku);
