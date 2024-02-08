@@ -106,7 +106,6 @@ $(document).ready(function () {
       if ($("header").hasClass('section-header-hidden')) $('header').removeClass('section-header-hidden')
       if ($("header").hasClass('animation')) $('header').removeClass('animation')
     }
-    console.log(lastScrollTop)
     lastScrollTop = pos;
   };
 
