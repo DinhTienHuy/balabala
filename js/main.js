@@ -158,6 +158,26 @@ $(document).ready(function () {
       $(".is--tablet.layout__switch button").removeClass("active");
       $(this).addClass("active");
     }
+    if (breakpoint === "mobile") {
+      $(".list_product .row > div").removeClass(`col-12`);
+      $(".list_product .row > div").removeClass(function (index, className) {
+        var classes = className.split(" ");
+        var filteredClasses = classes.filter(function (c) {
+          return c.startsWith("col-lg-");
+        });
+        return filteredClasses.join(" ");
+      });
+      $(".list_product .row > div").removeClass(function (index, className) {
+        var classes = className.split(" ");
+        var filteredClasses = classes.filter(function (c) {
+          return c.startsWith("col-md-");
+        });
+        return filteredClasses.join(" ");
+      });
+      $(".list_product .row > div").addClass(`col-${col}`);
+      $(".is--mobile.layout__switch button").removeClass("active");
+      $(this).addClass("active");
+    }
   });
 
   $(".btn-filter").on("click", function (e) {
