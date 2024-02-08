@@ -135,26 +135,18 @@ $(document).ready(function () {
     let col = $(this).data("col");
     let breakpoint = $(this).data("breakpoint");
     if (breakpoint === "desktop") {
-      $(".list_product .row > div").removeClass(function (index, className) {
-        var classes = className.split(" ");
-        var filteredClasses = classes.filter(function (c) {
-          return c.startsWith("col-lg-");
-        });
-        return filteredClasses.join(" ");
-      });
-      $(".list_product .row > div").addClass(`col-lg-${col}`);
+      $(".list_product .row > div").attr(
+        "class",
+        `col-6 col-md-6 col-lg-${col}`
+      );
       $(".is--desktop.layout__switch button").removeClass("active");
       $(this).addClass("active");
     }
     if (breakpoint === "tablet") {
-      $(".list_product .row > div").removeClass(function (index, className) {
-        var classes = className.split(" ");
-        var filteredClasses = classes.filter(function (c) {
-          return c.startsWith("col-md-");
-        });
-        return filteredClasses.join(" ");
-      });
-      $(".list_product .row > div").addClass(`col-md-${col}`);
+      $(".list_product .row > div").attr(
+        "class",
+        `col-6 col-md-${col} col-lg-3`
+      );
       $(".is--tablet.layout__switch button").removeClass("active");
       $(this).addClass("active");
     }
