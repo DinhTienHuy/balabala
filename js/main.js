@@ -107,7 +107,6 @@ $(document).ready(function () {
       if ($("header").hasClass("animation"))
         $("header").removeClass("animation");
     }
-    console.log(lastScrollTop);
     lastScrollTop = pos;
   };
 
@@ -132,32 +131,16 @@ $(document).ready(function () {
   /*page Product Category*/
   $(".layout__switch button").click(function (e) {
     e.preventDefault();
-    let col = $(this).data("col");
-    let breakpoint = $(this).data("breakpoint");
-    if (breakpoint === "desktop") {
-      $(".list_product .row > div").attr(
-        "class",
-        `col-6 col-md-6 col-lg-${col}`
-      );
-      $(".is--desktop.layout__switch button").removeClass("active");
-      $(this).addClass("active");
-    }
-    if (breakpoint === "tablet") {
-      $(".list_product .row > div").attr(
-        "class",
-        `col-6 col-md-${col} col-lg-3`
-      );
-      $(".is--tablet.layout__switch button").removeClass("active");
-      $(this).addClass("active");
-    }
-    if (breakpoint === "mobile") {
-      $(".list_product .row > div").attr(
-        "class",
-        `col-${col} col-md-6 col-lg-3`
-      );
-      $(".is--mobile.layout__switch button").removeClass("active");
-      $(this).addClass("active");
-    }
+    let col = $(this).attr("data-col");
+    let breakpoint = $(this).attr("data-breakpoint");
+    let currentClass = $(this).parent().attr("data-class-name");
+
+    $(".is--" + breakpoint + " button").removeClass("active");
+    $(this).addClass("active");
+
+    $(".list_product .product-item").addClass(col)
+    $(this).parent().attr("data-class-name", col)
+    $(".list_product .product-item").removeClass(currentClass);
   });
 
   $(".btn-filter").on("click", function (e) {
