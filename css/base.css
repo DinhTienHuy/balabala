@@ -928,6 +928,10 @@ ul {
     flex: 0 0 auto;
     width: auto;
   }
+  .col-lg-13{
+    flex: 0 0 auto;
+    width: 20%;
+  }
   .col-lg-1 {
     flex: 0 0 auto;
     width: 8.33333333%;

@@ -1,0 +1,12 @@
+.container {
+  max-width: 1021px !important;
+  padding-left: 21px;
+  padding-right: 21px;
+  margin: 0 auto;
+}
+header {
+  .main_header {
+    display: flex;
+    justify-content: space-between;
+  }
+}
