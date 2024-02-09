@@ -133,42 +133,6 @@ $(document).ready(function () {
   /*page Product Category*/
   $(".layout__switch button").click(function (e) {
     e.preventDefault();
-<<<<<<< HEAD
-    let col = $(this).data("col");
-    let breakpoint = $(this).data("breakpoint");
-    if (breakpoint === "desktop") {
-      $(".list_product .row > div").removeClass(function (index, className) {
-        var classes = className.split(" ");
-        var filteredClasses = classes.filter(function (c) {
-          return c.startsWith("col-lg-");
-        });
-        return filteredClasses.join(" ");
-      });
-      $(".list_product .row > div").addClass(`col-lg-${col}`);
-      $(".is--desktop.layout__switch button").removeClass("active");
-      $(this).addClass("active");
-    }
-    if (breakpoint === "tablet") {
-      $(".list_product .row > div").removeClass(function (index, className) {
-        var classes = className.split(" ");
-        var filteredClasses = classes.filter(function (c) {
-          return c.startsWith("col-md-");
-        });
-        return filteredClasses.join(" ");
-      });
-      $(".list_product .row > div").addClass(`col-md-${col}`);
-      $(".is--tablet.layout__switch button").removeClass("active");
-      $(this).addClass("active");
-    }
-    if (breakpoint === "mobile") {
-      $(".list_product .row > div").attr(
-        "class",
-        `col-${col} col-md-6 col-lg-3`
-      );
-      $(".is--mobile.layout__switch button").removeClass("active");
-      $(this).addClass("active");
-    }
-=======
     let col = $(this).attr("data-col");
     let breakpoint = $(this).attr("data-breakpoint");
     let currentClass = $(this).parent().attr("data-class-name");
@@ -176,10 +140,9 @@ $(document).ready(function () {
     $(".is--" + breakpoint + " button").removeClass("active");
     $(this).addClass("active");
 
-    $(".list_product .product-item").addClass(col)
-    $(this).parent().attr("data-class-name", col)
+    $(".list_product .product-item").addClass(col);
+    $(this).parent().attr("data-class-name", col);
     $(".list_product .product-item").removeClass(currentClass);
->>>>>>> 8c04c91aedbadd50edf4e73b6ac07d5555570f47
   });
 
   $(".btn-filter").on("click", function (e) {
