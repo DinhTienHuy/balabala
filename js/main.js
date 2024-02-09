@@ -1,4 +1,6 @@
 $(document).ready(function () {
+  /*checkout*/
+
   $(".list_slider .container").slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -159,7 +161,10 @@ $(document).ready(function () {
       $(this).addClass("active");
     }
     if (breakpoint === "mobile") {
-      $(".list_product .row > div").attr('class',`col-${col} col-md-6 col-lg-3`);
+      $(".list_product .row > div").attr(
+        "class",
+        `col-${col} col-md-6 col-lg-3`
+      );
       $(".is--mobile.layout__switch button").removeClass("active");
       $(this).addClass("active");
     }

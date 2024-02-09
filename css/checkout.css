@@ -1,13 +1,487 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 14px;
+  color: #222;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  -webkit-appearance: none;
+  -webkit-font-smoothing: inherit;
+  border: none;
+  background: transparent;
+  line-height: normal;
+}
+
 .container {
-  max-width: 1021px !important;
-  padding-left: 21px;
-  padding-right: 21px;
+  max-width: 1200px !important;
   margin: 0 auto;
 }
 
+header {
+  padding: 21px 0;
+  border-bottom: 1px solid #dedede;
+}
 header .main_header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+header .main_header h1 {
+  margin: 0;
+}
+header .main_header h1 a {
+  max-width: 287px;
+  max-inline-size: 287px;
+  display: block;
+  color: inherit;
+  outline-color: rgba(0, 0, 0, 0);
+  transition-timing-function: ease-in-out;
+  transition-property: all;
+}
+header .main_header h1 a img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+header .main_header span .cart_link {
+  color: #1773b0;
+}
+header .main_header span .cart_link span {
+  height: 24px;
+  color: #1773b0;
+  width: 24px;
+  display: block;
+  stroke: currentColor;
+}
+header .main_header span .cart_link span svg {
+  fill: none;
+}
+
+.fieldset {
+  margin: -0.45em;
+  zoom: 1;
+}
+.fieldset .field {
+  width: 100%;
+  float: left;
+  padding: 0.45em;
+  box-sizing: border-box;
+}
+.fieldset .field .field-input-wrapper {
+  position: relative;
+  position: relative;
+}
+.fieldset .field .field-input-wrapper .field-input {
+  box-shadow: 0 0 0 0.6px #d9d9d9;
+  transition: all 0.2s ease-out;
+  background-color: white;
+  color: #333333;
+  border-radius: 5px;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 13.5px 11px;
+  word-break: normal;
+}
+.fieldset .field .field-input-wrapper .field-input:focus {
+  box-shadow: 0 0 0 2px #338dbc;
+  outline: none;
+}
+.fieldset .field .field-input-wrapper .field-label {
+  font-size: 0.85714em;
+  font-weight: normal;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 0 0.93333em;
+  z-index: 1;
+  user-select: none;
+  transform: translateY(3px);
+  pointer-events: none;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  box-sizing: border-box;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  color: #999999;
+  transition: all 0.2s ease-out;
+  margin: 0.5em 0;
+  margin-top: 0.3em;
+  display: block;
+}
+.fieldset .field .field-input-wrapper .field-description {
+  display: block;
+  margin-left: 25px;
+  margin-top: 2px;
+}
+.fieldset .field .field-input-wrapper button {
+  right: 5px;
+  top: 10px;
+  position: absolute;
+  height: 18px;
+  width: 18px;
+}
+.fieldset .field .field-input-wrapper button span {
+  display: block;
+  stroke: currentColor;
+  color: #707070;
+}
+.fieldset .field .field-input-wrapper button span svg {
+  fill: none;
+}
+.fieldset .field .field-input-wrapper button span svg path {
+  vector-effect: non-scaling-stroke;
+  stroke-width: 1.4px;
+}
+.fieldset .field .field-input-wrapper button span.selec {
+  height: 10px;
+  width: 10px;
+  display: block;
+}
+.fieldset .field .field-input-wrapper button.icon_phone {
+  right: 10px;
+  top: 15px;
+}
+.fieldset .field .field-input-btn-wrapper {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.fieldset .field .field-input-btn-wrapper .field-input-btn {
+  width: auto;
+  margin-left: 0.9em;
+  white-space: nowrap;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.fieldset .field .field-input-btn-wrapper .field-input-wrapper {
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+.fieldset .field .field-message {
+  font-size: 0.85714em;
+}
+.fieldset .field .field-message.field-message-error {
+  margin: 0;
+  display: none;
+  margin: 0.75em 0 0.25em;
+  transition: all 0.3s ease-out;
+  line-height: 1.3em;
+  color: #ff6d6d;
+}
+.fieldset:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.fieldset:before {
+  content: "";
+  display: table;
+}
+.fieldset .field.field-active .field-input-wrapper .field-label {
+  color: #737373;
+}
+.fieldset .field.field-show-floating-label .field-input-wrapper .field-label {
+  transform: none;
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.fieldset .field.field-show-floating-label .field-input-wrapper .field-input {
+  padding-top: 1.5em;
+  padding-bottom: 0.38em;
+}
+.fieldset .field.field-show-floating-label .field-input-wrapper .field-input::-webkit-input-placeholder {
+  color: transparent;
+}
+.fieldset .field.field-show-floating-label .field-input-wrapper .field-input::-moz-placeholder {
+  color: transparent;
+  color: transparent;
+}
+.fieldset .field.field-show-floating-label .field-input-wrapper .field-input::-ms-input-placeholder {
+  color: transparent;
+}
+.fieldset .field.field-error .field-message.field-message-error {
+  display: block;
+}
+.fieldset .field-half {
+  width: 50% !important;
+}
+.fieldset .field-two-thirds {
+  width: 66.66667% !important;
+}
+.fieldset .field-third {
+  width: 33.33333% !important;
+}
+
+.radio-wrapper .radio-input .input-radio {
+  position: relative;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  border: 1px solid #f5f5f5;
+  transition: all 0.3s ease-out;
+}
+.radio-wrapper .radio-input .input-radio:checked {
+  border: none;
+  box-shadow: 0 0 0 10px #338dbc inset;
+}
+.radio-wrapper .radio-input .input-radio:after {
+  position: absolute;
+  content: "";
+  width: 6px;
+  height: 6px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.checkbox-wrapper .checkbox-input {
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+.checkbox-wrapper .checkbox-input .input-checkbox {
+  background-clip: padding-box;
+  border-radius: 5px;
+  width: 18px;
+  margin-right: 10px;
+  height: 18px;
+  cursor: pointer;
+  border: 1px solid #eee;
+  transition: all 0.3s ease-out;
+  box-sizing: initial;
+}
+.checkbox-wrapper .checkbox-input .input-checkbox:checked {
+  border: 1px solid #1773b0;
+  box-shadow: 0 0 0 10px #1773b0 inset;
+}
+.checkbox-wrapper .checkbox-input .checkbox_icon {
+  position: absolute;
+  top: 7px;
+  left: 4px;
+}
+.checkbox-wrapper .checkbox-input .checkbox_icon span {
+  display: block;
+  height: 10px;
+  width: 10px;
+  stroke: currentColor;
+}
+.checkbox-wrapper .checkbox-input .checkbox_icon span svg {
+  fill: none;
+  color: white;
+  display: block;
+}
+.checkbox-wrapper .checkbox-input .checkbox_icon span svg path {
+  vector-effect: non-scaling-stroke;
+  stroke-width: 1.4px;
+}
+.checkbox-wrapper .checkbox-input label {
+  cursor: pointer;
+  color: #000;
+}
+
+.section_heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.section_heading h2 {
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 600;
+  color: #000;
+}
+.section_heading span {
+  color: #707070;
+  font-size: 14px;
+}
+.section_heading span a {
+  color: #1773b0;
+  position: relative;
+  text-decoration: underline;
+}
+.section_heading span a:hover {
+  opacity: 0.8;
+}
+
+.field.field-error .field-input-wrapper .field-input {
+  box-shadow: 0 0 0 2px #ff6d6d;
+  outline: none;
+}
+
+.content__wrapper {
+  position: relative;
+}
+.content__wrapper .ep_checkout .ep_wrap .ep_txt {
+  align-items: flex-end;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+.content__wrapper .ep_checkout .ep_wrap .ep_txt h2 {
+  color: #707070;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: -3px;
+}
+.content__wrapper .ep_checkout .ep_wrap .ep_btns {
+  padding-top: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.content__wrapper .ep_checkout .ep_wrap .ep_btns a {
+  display: block;
+  background-color: #592ff4;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 5px;
+  font-family: SF Pro Text, sans-serif;
+  font-style: normal;
+  position: relative;
+  max-width: 280px;
+  width: 100%;
+  height: 48px;
+  margin-bottom: 0;
+}
+.content__wrapper .ep_checkout .ep_wrap .ep_btns a svg {
+  fill: white;
+  width: 84px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.content__wrapper .ep_checkout .ep_wrap .ep_btns a:hover {
+  background-color: #390ced;
+}
+.content__wrapper .ep_checkout .ep_wrap .ep_btns button {
+  padding: 12px 0;
+  border-radius: 5px;
+  height: 48px;
+  max-width: 280px;
+  width: 100%;
+  background-image: url(https://www.gstatic.com/instantbuy/svg/dark_gpay.svg);
+  background-color: #000;
+  background-origin: content-box;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.content__wrapper .ep_checkout .ep_wrap .ep_btns button:hover {
+  background-color: #3c4043;
+}
+.content__wrapper .ep_checkout .separator {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.content__wrapper .ep_checkout .separator::before, .content__wrapper .ep_checkout .separator::after {
+  border: 1px solid #dedede;
+  content: "";
+  flex-grow: 1;
+}
+.content__wrapper .ep_checkout .separator .sp_txt {
+  margin: 0 14px;
+}
+.content__wrapper .delivery {
+  margin-top: 30px;
+}
+.content__wrapper .delivery .section_heading {
+  display: block;
+  margin-bottom: 10px;
+}
+.content__wrapper .shipping {
+  margin-top: 30px;
+}
+.content__wrapper .shipping h3 {
+  margin: 0;
+  font-size: 17px;
+  line-height: 17px;
+  color: #000;
+  font-weight: 500;
+}
+.content__wrapper .shipping .shipping_wrap {
+  border-radius: 5px;
+  background: #f5f5f5;
+  padding: 17px;
+  margin-top: 17px;
+  display: flex;
+  align-items: center;
+}
+.content__wrapper .shipping .shipping_wrap p {
+  font-size: 14px;
+  margin: 0;
+}
+.content__wrapper .payment {
+  overflow: hidden;
+  border: 1px solid #dedede;
+  border-radius: 5px;
+  margin-bottom: 35px;
+}
+.content__wrapper .payment .radio-wrapper {
+  background-color: #fff;
+}
+.content__wrapper .payment .radio-wrapper .creditCards {
+  padding: 17px;
+  background-color: rgba(0, 0, 0, 0.045);
+}
+.content__wrapper .payment .radio-wrapper .creditCards:first-child {
+  display: block;
+}
+.content__wrapper .payment .radio-wrapper .creditCards #use_shipping {
+  border: 1px solid #dedede;
+  background-color: #fff;
+}
+.content__wrapper .payment .radio-wrapper .radio-label {
+  padding: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.content__wrapper .payment .radio-wrapper .radio-label .radio-input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.content__wrapper .payment .radio-wrapper .radio-label .radio-content-input {
+  display: flex;
+  gap: 5px;
+}
+.content__wrapper .payment .radio-wrapper .radio-label .radio-content-input .hwZCn svg {
+  width: 85px;
+}
+.content__wrapper .payment .radio-wrapper.active > label {
+  border: 1px solid #338dbc;
+  background-color: #f0f5ff;
+}
+.content__wrapper .payment .radio-wrapper:first-child > label {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.content__wrapper .btn_checkout button {
+  border-radius: 5px;
+  background: #1773b0;
+  padding: 14px;
+  width: 100%;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+}
+.content__wrapper .btn_checkout button:hover {
+  background-color: #105989;
 }
 
 /*# sourceMappingURL=checkout.css.map */
