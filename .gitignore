@@ -1,3 +1,4 @@
 *.map
 css/styles.css
 .idea/
+.DS_Store

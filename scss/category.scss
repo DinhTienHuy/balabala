@@ -314,6 +314,8 @@ h6,
       align-items: center;
       .layout__switch {
         button {
+          background: transparent;
+          padding: 0;
           span {
             display: block;
             position: relative;
@@ -682,7 +684,6 @@ h6,
           }
           .pro-variant {
             text-align: start;
-            margin-bottom: 40px;
             .pr-color__item {
               padding: 1px;
               margin: 4px;

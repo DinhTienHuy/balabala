@@ -306,6 +306,10 @@ h6,
   display: flex;
   align-items: center;
 }
+.product-category .collection-header .layout-switch-wrapper .layout__switch button {
+  background: transparent;
+  padding: 0;
+}
 .product-category .collection-header .layout-switch-wrapper .layout__switch button span {
   display: block;
   position: relative;
@@ -631,7 +635,6 @@ h6,
 }
 .product-category .list_product .product-wrapper .pro-info .pro-info__inner .pro-variant {
   text-align: start;
-  margin-bottom: 40px;
 }
 .product-category .list_product .product-wrapper .pro-info .pro-info__inner .pro-variant .pr-color__item {
   padding: 1px;
