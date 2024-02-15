@@ -7,11 +7,13 @@
   <script src="js/jquery-3.6.3.min.js"></script>
 
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" href="js/carousel/dist/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="js/carousel/dist/assets/owl.theme.default.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2.0/dist/flickity.min.css">
+
   <!-- Add the slick-theme.css if you want default styling -->
-  <link rel="stylesheet" type="text/css"
-    href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
-  <link rel="stylesheet" type="text/css"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -19,59 +21,130 @@
     rel="stylesheet" />
   <link rel="stylesheet" href="css/base.css" />
   <link rel="stylesheet" href="css/product_detail.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
   <title>Product Detail</title>
 </head>
 <body>
   <main>
-      <section class="line-section">
-        <div class="section-inner">
-          <div class="custom-line"></div>
-        </div>
-      </section>
-      <section class="page_section_heading">
-        <div class="header-banner">
-          <div class="page-head">
-            <div class="container">
-              <nav class="breadcrumbs">
-                <ul class="breadcrumbs__list">
-                  <li class="breadcrumbs__item">
-                    <a href="/" class="dib">Home</a>
-                    <svg
-                      class="icon-arrow"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 32 32"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      stroke-width="0.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <path
-                        d="M 12.96875 4.28125 L 11.53125 5.71875 L 21.8125 16 L 11.53125 26.28125 L 12.96875 27.71875 L 23.96875 16.71875 L 24.65625 16 L 23.96875 15.28125 Z"
-                      ></path>
-                    </svg>
-                  </li>
-                  <span>
-                    Kids Letter Printed Loose Long Sleeve T-Shirt208322100104
-                  </span>
-                </ul>
-              </nav>
-            </div>
+    <section class="line-section">
+      <div class="section-inner">
+        <div class="custom-line"></div>
+      </div>
+    </section>
+    <section class="page_section_heading">
+      <div class="header-banner">
+        <div class="page-head">
+          <div class="container">
+            <nav class="breadcrumbs">
+              <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__item">
+                  <a href="/" class="dib">Home</a>
+                  <svg
+                    class="icon-arrow"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 32 32"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    stroke-width="0.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M 12.96875 4.28125 L 11.53125 5.71875 L 21.8125 16 L 11.53125 26.28125 L 12.96875 27.71875 L 23.96875 16.71875 L 24.65625 16 L 23.96875 15.28125 Z"
+                    ></path>
+                  </svg>
+                </li>
+                <span>
+                  Kids Letter Printed Loose Long Sleeve T-Shirt208322100104
+                </span>
+              </ul>
+            </nav>
           </div>
         </div>
-      </section>
-      <section class="section-main-product">
-        <div class="container is--layout_wide">
-          <div class="row">
-            <div class="col-12 main-area">
-              <div class="row row__product">
-                <div class="col-12 col-sm-12 col-md-6">
-                  <div class="product__media-left">
-                    <div class="wrap-slick3 flex-sb flex-w">
-                      <div class="wrap-slick3-dots"></div>
-                      <div class="wrap-slick3-arrows flex-sb-m flex-w"></div>
-
+      </div>
+    </section>
+    <section class="section-main-product">
+      <div class="container is--layout_wide">
+        <div class="row">
+          <div class="col-12 main-area">
+            <div class="row row__product">
+              <div class="col-12 col-sm-12 col-md-6">
+                <div class="row product__media-left">
+                  <div class="main-image">
+                    <div class="swiper swiper1">
+                      <div class="slider-main swiper-wrapper">
+                        <div class="item-img swiper-slide">
+                          <img src="images/pro-detail_1.jpeg" alt="">
+                        </div>
+                        <div class="item-img swiper-slide">
+                          <img src="images/pro-detail_2.jpeg" alt="">
+                        </div>
+                        <div class="item-img swiper-slide">
+                          <img src="images/pro-detail_3.jpeg" alt="">
+                        </div>
+                        <div class="item-img swiper-slide">
+                          <img src="images/pro-detail_4.jpeg" alt="">
+                        </div>
+                        <div class="item-img swiper-slide">
+                          <img src="images/pro-detail_5.jpeg" alt="">
+                        </div>
+                        <div class="item-img swiper-slide">
+                          <img src="images/pro-detail_6.jpeg" alt="">
+                        </div>
+                        <div class="item-img swiper-slide">
+                          <img src="images/pro-detail_7.jpeg" alt="">
+                        </div>
+                        <div class="item-img swiper-slide">
+                          <img src="images/pro-detail_8.jpeg" alt="">
+                        </div>
+                        <div class="item-img swiper-slide">
+                          <img src="images/pro-detail_9.jpeg" alt="">
+                        </div>
+                        <div class="item-img swiper-slide">
+                          <img src="images/pro-detail_10.jpeg" alt="">
+                        </div>
+                      </div>
+                    </div>
+                      
+                  </div>
+                  <div class="thump-image">
+                    <div class="swiper swiper2">
+                      <div class="slider-nav swiper-wrapper">
+                        <div class="item-img swiper-slide">
+                          <img src="images/pro-detail_1.jpeg" alt="">
+                        </div>
+                        <div class="item-img swiper-slide">
+                          <img src="images/pro-detail_2.jpeg" alt="">
+                        </div>
+                        <div class="item-img swiper-slide">
+                          <img src="images/pro-detail_3.jpeg" alt="">
+                        </div>
+                        <div class="item-img swiper-slide">
+                          <img src="images/pro-detail_4.jpeg" alt="">
+                        </div>
+                        <div class="item-img swiper-slide">
+                          <img src="images/pro-detail_5.jpeg" alt="">
+                        </div>
+                        <div class="item-img swiper-slide">
+                          <img src="images/pro-detail_6.jpeg" alt="">
+                        </div>
+                        <div class="item-img swiper-slide">
+                          <img src="images/pro-detail_7.jpeg" alt="">
+                        </div>
+                        <div class="item-img swiper-slide">
+                          <img src="images/pro-detail_8.jpeg" alt="">
+                        </div>
+                        <div class="item-img swiper-slide">
+                          <img src="images/pro-detail_9.jpeg" alt="">
+                        </div>
+                        <div class="item-img swiper-slide">
+                          <img src="images/pro-detail_10.jpeg" alt="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="col-12 col-sm-12 col-md-6 product__info-wrapper">
@@ -217,7 +290,7 @@
                 </div>
               </div>
             </div>
-          </div>
+         </div>
         </div>
       </div>
     </section>
@@ -1465,8 +1538,61 @@
       </div>
     </div>
   </section>
+
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script type="text/javascript" src="js/carousel/dist/owl.carousel.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/flickity@2.0.11/dist/flickity.pkgd.min.js"></script>
   <script src="js/main.js"></script>
+  <script>
+  var galleryTop = new Swiper('.swiper1', {
+    slidesPerView: '1',
+    effect: "fade",
+  });
+  let width = screen.width;
+  if (width >= 1025) {
+    var galleryThumbs = new Swiper('.swiper2', {
+      spaceBetween: 10,
+      slidesPerView: 8,
+      slideToClickedSlide: true,
+      direction: "vertical",
+      loop: true,
+      breakpoints: {
+        1024: {
+          slidesPerView: 4.5,
+        },
+        1365: {
+          slidesPerView: 6.5,
+        },
+        1439: {
+          slidesPerView: 6.9,
+        },
+        1441: {
+          slidesPerView: 7,
+        },
+      },
+    });
+  }
+  else {
+    var galleryThumbs = new Swiper('.swiper2', {
+      spaceBetween: 5,
+      slidesPerView: 4,
+      loop: true,
+    });
+  }
+
+  $(".swiper2 .swiper-slide").on("click", function () {
+    let index = $(this).attr("data-swiper-slide-index")
+    galleryTop.slideTo(index);
+  });
+
+  galleryTop.on('slideChange', function ({realIndex:r,previousIndex:p}) {
+    galleryThumbs.slideTo(r);
+    $(".swiper2 .swiper-slide").removeClass("swiper-slide-active")
+    let elm = $(".swiper2 .swiper-slide[data-swiper-slide-index=" +r+  "]")
+    elm.addClass("swiper-slide-active")
+});
+  </script>
 </body>
 
 </html>

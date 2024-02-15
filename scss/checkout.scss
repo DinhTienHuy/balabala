@@ -520,3 +520,74 @@ header {
     }
   }
 }
+.sidebar {
+  padding: 20px;
+  .wrapper {
+    padding: 20px;
+    .item-product {
+      display: flex;
+      height: 100%;
+      block-size: 100%;
+      .image-product {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        min-inline-size: 64px;
+        min-width: 64px;
+        max-width: 64px;
+        max-inline-size: 64px;
+        max-height: 64px;
+        max-block-size: 64px;
+        min-block-size: 64px;
+        min-height: 64px;
+        position: relative;
+        border-radius: 5px;
+        border: 1px solid rgb(208, 208, 208);
+        img {
+          object-fit: contain;
+          height: 100%;
+          left: 0;
+          position: absolute;
+          top: 0;
+          width: 100%;
+          z-index: 1;
+        }
+        .count {
+          border-radius: 50%;
+          font-size: 12px;
+          text-align: center;
+          color: #fff;
+          width: 22px;
+          height: 22px;
+          line-height: 22px;
+          background: rgba(0, 0, 0, 0.56);
+          position: absolute;
+          top: -12px;
+          right: -10px;
+          z-index: 2;
+        }
+      }
+      .info-product {
+        padding-left: 15px;
+        .name-product {
+          color: #000;
+        }
+        .variant-product {
+          color: rgba(0, 0, 0, 0.56)
+        }
+      }
+      .right-info {
+        padding-left: 15px;
+      }
+    }
+    .discount-wrapper {
+      display: flex;
+      height: 100%;
+      block-size: 100%;
+      input {
+        padding: 13px 11px;
+        
+      }
+    }
+  }
+}
