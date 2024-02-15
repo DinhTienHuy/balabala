@@ -9,6 +9,10 @@
   <!-- Add the slick-theme.css if you want default styling -->
   <link rel="stylesheet" type="text/css"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <!-- Add the slick-theme.css if you want default styling -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -46,160 +50,242 @@
   </header>
   <main>
     <section class="content">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-md-6 col-lg-6">
-            <div class="content__wrapper">
-              <div class="ep_checkout">
-                <div class="ep_wrap">
-                  <div class="ep_txt">
-                    <h2>Express checkout</h2>
-                  </div>
-                  <div class="ep_btns">
-                    <a href="#">
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="inherit" aria-hidden="true"
-                        preserveAspectRatio="xMidYMid" viewBox="0 0 341 80.035" class="P3VGi" style="fill: white">
-                        <path fill-rule="evenodd"
-                          d="M227.297 0c-6.849 0-12.401 5.472-12.401 12.223v55.59c0 6.75 5.552 12.222 12.401 12.222h101.06c6.849 0 12.401-5.472 12.401-12.222v-55.59c0-6.75-5.552-12.223-12.401-12.223zm17.702 55.892v-14.09h8.994c8.217 0 12.586-4.542 12.586-11.423s-4.369-11-12.586-11h-14.788v36.513zm0-31.084h7.664c5.319 0 7.932 2.154 7.932 5.758s-2.518 5.758-7.695 5.758h-7.901zm31.796 31.833c4.417 0 7.314-1.92 8.644-5.196.38 3.65 2.613 5.523 7.457 4.26l.048-3.886c-1.948.187-2.328-.515-2.328-2.528v-9.55c0-5.617-3.752-8.94-10.686-8.94-6.84 0-10.782 3.37-10.782 9.08h5.32c0-2.714 1.947-4.353 5.367-4.353 3.609 0 5.272 1.545 5.224 4.214v1.217l-6.127.655c-6.887.749-10.686 3.324-10.686 7.818 0 3.698 2.659 7.209 8.549 7.209m1.187-4.213c-2.992 0-4.179-1.592-4.179-3.184 0-2.153 2.47-3.136 7.314-3.698l3.8-.421c-.238 4.12-3.04 7.303-6.935 7.303m32.555 5.29c-2.422 5.804-6.317 7.536-12.396 7.536h-2.613V60.48h2.803c3.324 0 4.939-1.03 6.697-3.979l-10.782-24.95h5.984l7.695 18.21 6.839-18.21h5.842z"
-                          clip-rule="evenodd"></path>
-                        <path
-                          d="M29.514 35.18c-7.934-1.697-11.469-2.36-11.469-5.374 0-2.834 2.392-4.246 7.176-4.246 4.207 0 7.283 1.813 9.546 5.363.171.274.524.369.812.222l8.927-4.447a.616.616 0 0 0 .256-.864c-3.705-6.332-10.55-9.798-19.562-9.798-11.843 0-19.2 5.752-19.2 14.898 0 9.714 8.96 12.169 16.904 13.865 7.944 1.697 11.49 2.36 11.49 5.374s-2.584 4.435-7.742 4.435c-4.763 0-8.297-2.15-10.433-6.321a.63.63 0 0 0-.843-.274L6.47 52.364a.623.623 0 0 0-.278.843c3.535 7.006 10.785 10.947 20.47 10.947 12.334 0 19.787-5.658 19.787-15.088s-9.001-12.169-16.935-13.865zM77.353 16.036c-5.062 0-9.536 1.77-12.75 4.92-.203.19-.534.053-.534-.221V.622a.62.62 0 0 0-.63-.622h-11.17a.62.62 0 0 0-.63.622v62.426a.62.62 0 0 0 .63.621h11.17a.62.62 0 0 0 .63-.621V35.664c0-5.289 4.11-9.345 9.653-9.345 5.542 0 9.557 3.972 9.557 9.345v27.384a.62.62 0 0 0 .63.621h11.17a.62.62 0 0 0 .63-.621V35.664c0-11.505-7.646-19.618-18.356-19.618zM118.389 14.255c-6.065 0-11.767 1.823-15.847 4.467a.62.62 0 0 0-.202.833l4.922 8.292c.182.295.566.4.865.22a19.8 19.8 0 0 1 10.262-2.78c9.749 0 16.914 6.785 16.914 15.75 0 7.64-5.734 13.297-13.006 13.297-5.926 0-10.037-3.403-10.037-8.207 0-2.75 1.185-5.005 4.271-6.596a.607.607 0 0 0 .246-.864l-4.645-7.754a.63.63 0 0 0-.759-.264c-6.225 2.276-10.593 7.755-10.593 15.109 0 11.126 8.981 19.428 21.507 19.428 14.629 0 25.147-9.998 25.147-24.338 0-15.372-12.237-26.603-29.066-26.603zM180.098 15.952c-5.649 0-10.689 2.054-14.373 5.678a.313.313 0 0 1-.534-.22v-4.363a.62.62 0 0 0-.63-.621H153.68a.62.62 0 0 0-.63.621v62.331a.62.62 0 0 0 .63.622h11.169a.62.62 0 0 0 .631-.622v-20.44c0-.274.331-.41.533-.231 3.674 3.371 8.532 5.342 14.096 5.342 13.102 0 23.321-10.463 23.321-24.054 0-13.592-10.23-24.054-23.321-24.054zm-2.103 37.54c-7.454 0-13.103-5.848-13.103-13.582 0-7.733 5.638-13.58 13.103-13.58s13.091 5.752 13.091 13.58-5.553 13.581-13.102 13.581z">
-                        </path>
-                      </svg>
-                    </a>
-                    <button type="button" class="gpay-button-fill"></button>
+      <div class="content_left">
+        <div class="content__wrapper">
+          <div class="ep_checkout">
+            <div class="ep_wrap">
+              <div class="ep_txt">
+                <h2>Express checkout</h2>
+              </div>
+              <div class="ep_btns">
+                <a href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="inherit" aria-hidden="true"
+                    preserveAspectRatio="xMidYMid" viewBox="0 0 341 80.035" class="P3VGi" style="fill: white">
+                    <path fill-rule="evenodd"
+                      d="M227.297 0c-6.849 0-12.401 5.472-12.401 12.223v55.59c0 6.75 5.552 12.222 12.401 12.222h101.06c6.849 0 12.401-5.472 12.401-12.222v-55.59c0-6.75-5.552-12.223-12.401-12.223zm17.702 55.892v-14.09h8.994c8.217 0 12.586-4.542 12.586-11.423s-4.369-11-12.586-11h-14.788v36.513zm0-31.084h7.664c5.319 0 7.932 2.154 7.932 5.758s-2.518 5.758-7.695 5.758h-7.901zm31.796 31.833c4.417 0 7.314-1.92 8.644-5.196.38 3.65 2.613 5.523 7.457 4.26l.048-3.886c-1.948.187-2.328-.515-2.328-2.528v-9.55c0-5.617-3.752-8.94-10.686-8.94-6.84 0-10.782 3.37-10.782 9.08h5.32c0-2.714 1.947-4.353 5.367-4.353 3.609 0 5.272 1.545 5.224 4.214v1.217l-6.127.655c-6.887.749-10.686 3.324-10.686 7.818 0 3.698 2.659 7.209 8.549 7.209m1.187-4.213c-2.992 0-4.179-1.592-4.179-3.184 0-2.153 2.47-3.136 7.314-3.698l3.8-.421c-.238 4.12-3.04 7.303-6.935 7.303m32.555 5.29c-2.422 5.804-6.317 7.536-12.396 7.536h-2.613V60.48h2.803c3.324 0 4.939-1.03 6.697-3.979l-10.782-24.95h5.984l7.695 18.21 6.839-18.21h5.842z"
+                      clip-rule="evenodd"></path>
+                    <path
+                      d="M29.514 35.18c-7.934-1.697-11.469-2.36-11.469-5.374 0-2.834 2.392-4.246 7.176-4.246 4.207 0 7.283 1.813 9.546 5.363.171.274.524.369.812.222l8.927-4.447a.616.616 0 0 0 .256-.864c-3.705-6.332-10.55-9.798-19.562-9.798-11.843 0-19.2 5.752-19.2 14.898 0 9.714 8.96 12.169 16.904 13.865 7.944 1.697 11.49 2.36 11.49 5.374s-2.584 4.435-7.742 4.435c-4.763 0-8.297-2.15-10.433-6.321a.63.63 0 0 0-.843-.274L6.47 52.364a.623.623 0 0 0-.278.843c3.535 7.006 10.785 10.947 20.47 10.947 12.334 0 19.787-5.658 19.787-15.088s-9.001-12.169-16.935-13.865zM77.353 16.036c-5.062 0-9.536 1.77-12.75 4.92-.203.19-.534.053-.534-.221V.622a.62.62 0 0 0-.63-.622h-11.17a.62.62 0 0 0-.63.622v62.426a.62.62 0 0 0 .63.621h11.17a.62.62 0 0 0 .63-.621V35.664c0-5.289 4.11-9.345 9.653-9.345 5.542 0 9.557 3.972 9.557 9.345v27.384a.62.62 0 0 0 .63.621h11.17a.62.62 0 0 0 .63-.621V35.664c0-11.505-7.646-19.618-18.356-19.618zM118.389 14.255c-6.065 0-11.767 1.823-15.847 4.467a.62.62 0 0 0-.202.833l4.922 8.292c.182.295.566.4.865.22a19.8 19.8 0 0 1 10.262-2.78c9.749 0 16.914 6.785 16.914 15.75 0 7.64-5.734 13.297-13.006 13.297-5.926 0-10.037-3.403-10.037-8.207 0-2.75 1.185-5.005 4.271-6.596a.607.607 0 0 0 .246-.864l-4.645-7.754a.63.63 0 0 0-.759-.264c-6.225 2.276-10.593 7.755-10.593 15.109 0 11.126 8.981 19.428 21.507 19.428 14.629 0 25.147-9.998 25.147-24.338 0-15.372-12.237-26.603-29.066-26.603zM180.098 15.952c-5.649 0-10.689 2.054-14.373 5.678a.313.313 0 0 1-.534-.22v-4.363a.62.62 0 0 0-.63-.621H153.68a.62.62 0 0 0-.63.621v62.331a.62.62 0 0 0 .63.622h11.169a.62.62 0 0 0 .631-.622v-20.44c0-.274.331-.41.533-.231 3.674 3.371 8.532 5.342 14.096 5.342 13.102 0 23.321-10.463 23.321-24.054 0-13.592-10.23-24.054-23.321-24.054zm-2.103 37.54c-7.454 0-13.103-5.848-13.103-13.582 0-7.733 5.638-13.58 13.103-13.58s13.091 5.752 13.091 13.58-5.553 13.581-13.102 13.581z">
+                    </path>
+                  </svg>
+                </a>
+                <button type="button" class="gpay-button-fill"></button>
+              </div>
+            </div>
+            <div class="separator">
+              <div class="sp_txt">
+                <p><span>OR</span></p>
+              </div>
+            </div>
+            <div class="contact">
+              <div class="section_heading">
+                <h2 class="title">Contact</h2>
+                <span>Have an account? <a href="#">Login</a></span>
+              </div>
+              <div class="fieldset">
+                <div class="field">
+                  <div class="field-input-wrapper">
+                    <label class="field-label">Email or mobile phone number</label>
+                    <input placeholder="Email or mobile phone number" autocapitalize="off" class="field-input" size="30"
+                      type="text" />
                   </div>
                 </div>
-                <div class="separator">
-                  <div class="sp_txt">
-                    <p><span>OR</span></p>
-                  </div>
-                </div>
-                <div class="contact">
-                  <div class="section_heading">
-                    <h2 class="title">Contact</h2>
-                    <span>Have an account? <a href="#">Login</a></span>
-                  </div>
-                  <div class="fieldset">
-                    <div class="field">
-                      <div class="field-input-wrapper">
-                        <label class="field-label">Email or mobile phone number</label>
-                        <input placeholder="Email or mobile phone number" autocapitalize="off" class="field-input"
-                          size="30" type="text" />
-                      </div>
+                <div class="field checkbox-wrapper">
+                  <div class="checkbox-input">
+                    <input id="remem_email" type="checkbox" class="input-checkbox" name="" id="" />
+                    <div class="checkbox_icon">
+                      <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" focusable="false" aria-hidden="true"
+                          class="a8x1wuo _1fragemgc _1fragemig _1frageme8 _1frageme4">
+                          <path stroke-linecap="round" stroke-linejoin="round"
+                            d="m12.1 2.8-5.877 8.843a.35.35 0 0 1-.54.054L1.4 7.4"></path>
+                        </svg>
+                      </span>
                     </div>
-                    <div class="field checkbox-wrapper">
-                      <div class="checkbox-input">
-                        <input id="remem_email" type="checkbox" class="input-checkbox" name="" id="" />
-                        <div class="checkbox_icon">
-                          <span>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" focusable="false"
-                              aria-hidden="true" class="a8x1wuo _1fragemgc _1fragemig _1frageme8 _1frageme4">
-                              <path stroke-linecap="round" stroke-linejoin="round"
-                                d="m12.1 2.8-5.877 8.843a.35.35 0 0 1-.54.054L1.4 7.4"></path>
-                            </svg>
-                          </span>
-                        </div>
-                        <label class="field-label" for="remem_email">
-                          Email or mobile phone number
-                        </label>
-                      </div>
-                    </div>
+                    <label class="field-label" for="remem_email">
+                      Email or mobile phone number
+                    </label>
                   </div>
                 </div>
               </div>
-              <div class="delivery">
-                <div class="section_heading">
-                  <h2 class="title">Delivery</h2>
+            </div>
+          </div>
+          <div class="delivery">
+            <div class="section_heading">
+              <h2 class="title">Delivery</h2>
+            </div>
+            <div class="fieldset">
+              <div class="field field-show-floating-label field-required">
+                <div class="field-input-wrapper field-input-wrapper-select">
+                  <label class="field-label" for="customer_shipping_district">Quận / huyện</label>
+                  <select class="field-input" id="customer_shipping_district" name="customer_shipping_district">
+                    <option data-code="null" value="null" selected="">
+                      Chọn quận / huyện
+                    </option>
+                  </select>
+                  <button class="select_icon">
+                    <span class="selec">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" focusable="false" aria-hidden="true"
+                        class="a8x1wuo _1fragemgc _1fragemig _1frageme8 _1frageme4">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                          d="m11.9 5.6-4.653 4.653a.35.35 0 0 1-.495 0L2.1 5.6"></path>
+                      </svg>
+                    </span>
+                  </button>
                 </div>
+              </div>
+              <div class="field field-half">
+                <div class="field-input-wrapper">
+                  <label class="field-label" for="checkout_user_email">First name (optional)</label>
+                  <input placeholder="First name (optional)" autocapitalize="off" spellcheck="false" class="field-input"
+                    size="30" type="text" id="checkout_user_email" name="checkout_user[email]" value="" />
+                </div>
+              </div>
+              <div class="field field-half">
+                <div class="field-input-wrapper">
+                  <label class="field-label" for="checkout_user_email">Last name</label>
+                  <input autocomplete="false" placeholder="Last name" autocapitalize="off" spellcheck="false"
+                    class="field-input" size="30" type="text" />
+                </div>
+              </div>
+              <div class="field field-required">
+                <div class="field-input-wrapper">
+                  <label class="field-label" for="billing_address_address1">Postal code</label>
+                  <input placeholder="Postal code" autocapitalize="off" spellcheck="false" class="field-input" size="30"
+                    type="text" value="" />
+                </div>
+              </div>
+              <div class="field field-required">
+                <div class="field-input-wrapper">
+                  <label class="field-label" for="billing_address_address1">Address</label>
+                  <input placeholder="Address" autocapitalize="off" spellcheck="false" class="field-input" size="30"
+                    type="text" id="billing_address_address1" name="billing_address[address1]" value="" />
+                </div>
+              </div>
+              <div class="field field-required">
+                <div class="field-input-wrapper">
+                  <label class="field-label" for="billing_address_address1">Apartment, suite, etc.
+                    (optional)</label>
+                  <input placeholder="Apartment, suite, etc. (optional)" autocapitalize="off" spellcheck="false"
+                    class="field-input" size="30" type="text" id="billing_address_address1"
+                    name="billing_address[address1]" value="" />
+                </div>
+              </div>
+              <div class="field field-half">
+                <div class="field-input-wrapper">
+                  <label class="field-label" for="checkout_user_email">City</label>
+                  <input autocomplete="false" placeholder="City" autocapitalize="off" spellcheck="false"
+                    class="field-input" size="30" type="text" />
+                </div>
+              </div>
+              <div class="field field-half">
+                <div class="field-input-wrapper">
+                  <select class="field-input">
+                    <option data-code="null" value="null" selected="">
+                      Sate
+                    </option>
+                  </select>
+                  <button>
+                    <span class="selec">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" focusable="false" aria-hidden="true"
+                        class="a8x1wuo _1fragemgc _1fragemig _1frageme8 _1frageme4">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                          d="m11.9 5.6-4.653 4.653a.35.35 0 0 1-.495 0L2.1 5.6"></path>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+              </div>
+              <div class="field field-required">
+                <div class="field-input-wrapper">
+                  <label class="field-label" for="billing_address_address1">Phone</label>
+                  <input placeholder="Phone" autocapitalize="off" spellcheck="false" class="field-input" size="30"
+                    type="text" value="" />
+                  <button class="icon_phone">
+                    <span>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" focusable="false"
+                        aria-label="More information" class="a8x1wuo _1fragemgc _1fragemig _1frageme8 _1frageme4">
+                        <circle cx="7" cy="7" r="5.6"></circle>
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M5.6 5.1c.2-1.3 2.6-1.3 2.8 0S6.95 6.4 6.95 7.45m.055 2.35H7v.005h.005z"></path>
+                        <circle cx="7" cy="9.7" r="0.1"></circle>
+                      </svg>
+                    </span>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="shipping">
+            <h3>Shipping method</h3>
+            <div class="shipping_wrap">
+              <p>Enter your shipping address to view available shipping methods.</p>
+            </div>
+          </div>
+          <div class="section_heading" style="display: block;">
+            <h2 class="title" style="margin-bottom: 0;">Payment</h2>
+            <p>All transactions are secure and encrypted.</p>
+          </div>
+          <div class="payment">
+            <div class="radio-wrapper content-box-row active  is--shown">
+              <label class="radio-label" for="payment_1">
+                <div class="radio-input payment-method-checkbox">
+                  <input type-id="1" id="payment_1" class="input-radio" name="payment_method_id" type="radio"
+                    value="1002923036" checked="">
+                  <div>
+                    <span class="radio-label-primary">Credit card</span>
+                    <span class="quick-tagline hidden"></span>
+                  </div>
+                </div>
+                <div class="radio-content-input">
+
+                  <img alt="VISA"
+                    src="https://cdn.shopify.com/shopifycloud/checkout-web/assets/0169695890db3db16bfe.svg" role="img"
+                    width="38" height="24">
+                  <img alt="MASTERCARD"
+                    src="https://cdn.shopify.com/shopifycloud/checkout-web/assets/ae9ceec48b1dc489596c.svg" role="img"
+                    width="38" height="24">
+                  <img alt="AMEX"
+                    src="https://cdn.shopify.com/shopifycloud/checkout-web/assets/f11b90c2972f3811f2d5.svg" role="img"
+                    width="38" height="24">
+                  <img alt="UNIONPAY"
+                    src="https://cdn.shopify.com/shopifycloud/checkout-web/assets/bddb21e40274706727fb.svg" role="img"
+                    width="38" height="24">
+                </div>
+              </label>
+              <div class="creditCards">
                 <div class="fieldset">
-                  <div class="field field-show-floating-label field-required">
-                    <div class="field-input-wrapper field-input-wrapper-select">
-                      <label class="field-label" for="customer_shipping_district">Quận / huyện</label>
-                      <select class="field-input" id="customer_shipping_district" name="customer_shipping_district">
-                        <option data-code="null" value="null" selected="">
-                          Chọn quận / huyện
-                        </option>
-                      </select>
-                      <button class="select_icon">
-                        <span class="selec">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" focusable="false"
-                            aria-hidden="true" class="a8x1wuo _1fragemgc _1fragemig _1frageme8 _1frageme4">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                              d="m11.9 5.6-4.653 4.653a.35.35 0 0 1-.495 0L2.1 5.6"></path>
-                          </svg>
-                        </span>
-                      </button>
-                    </div>
-                  </div>
-                  <div class="field field-half">
-                    <div class="field-input-wrapper">
-                      <label class="field-label" for="checkout_user_email">First name (optional)</label>
-                      <input placeholder="First name (optional)" autocapitalize="off" spellcheck="false"
-                        class="field-input" size="30" type="text" id="checkout_user_email" name="checkout_user[email]"
-                        value="" />
-                    </div>
-                  </div>
-                  <div class="field field-half">
-                    <div class="field-input-wrapper">
-                      <label class="field-label" for="checkout_user_email">Last name</label>
-                      <input autocomplete="false" placeholder="Last name" autocapitalize="off" spellcheck="false"
-                        class="field-input" size="30" type="text" />
-                    </div>
-                  </div>
                   <div class="field field-required">
                     <div class="field-input-wrapper">
-                      <label class="field-label" for="billing_address_address1">Postal code</label>
-                      <input placeholder="Postal code" autocapitalize="off" spellcheck="false" class="field-input"
+                      <label class="field-label" for="billing_address_address1">Card number</label>
+                      <input placeholder="Card number" autocapitalize="off" spellcheck="false" class="field-input"
                         size="30" type="text" value="" />
-                    </div>
-                  </div>
-                  <div class="field field-required">
-                    <div class="field-input-wrapper">
-                      <label class="field-label" for="billing_address_address1">Address</label>
-                      <input placeholder="Address" autocapitalize="off" spellcheck="false" class="field-input" size="30"
-                        type="text" id="billing_address_address1" name="billing_address[address1]" value="" />
-                    </div>
-                  </div>
-                  <div class="field field-required">
-                    <div class="field-input-wrapper">
-                      <label class="field-label" for="billing_address_address1">Apartment, suite, etc.
-                        (optional)</label>
-                      <input placeholder="Apartment, suite, etc. (optional)" autocapitalize="off" spellcheck="false"
-                        class="field-input" size="30" type="text" id="billing_address_address1"
-                        name="billing_address[address1]" value="" />
-                    </div>
-                  </div>
-                  <div class="field field-half">
-                    <div class="field-input-wrapper">
-                      <label class="field-label" for="checkout_user_email">City</label>
-                      <input autocomplete="false" placeholder="City" autocapitalize="off" spellcheck="false"
-                        class="field-input" size="30" type="text" />
-                    </div>
-                  </div>
-                  <div class="field field-half">
-                    <div class="field-input-wrapper">
-                      <select class="field-input">
-                        <option data-code="null" value="null" selected="">
-                          Sate
-                        </option>
-                      </select>
-                      <button>
-                        <span class="selec">
+                      <button class="icon_phone">
+                        <span>
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" focusable="false"
                             aria-hidden="true" class="a8x1wuo _1fragemgc _1fragemig _1frageme8 _1frageme4">
                             <path stroke-linecap="round" stroke-linejoin="round"
-                              d="m11.9 5.6-4.653 4.653a.35.35 0 0 1-.495 0L2.1 5.6"></path>
+                              d="M3.5 6.3c0-2.298 1.131-4.9 3.5-4.9s3.5 2.602 3.5 4.9m-8.4.47v5.36c0 .26.21.47.47.47h8.86c.26 0 .47-.21.47-.47V6.77a.47.47 0 0 0-.47-.47H2.57a.47.47 0 0 0-.47.47">
+                            </path>
                           </svg>
+                        </span>
                         </span>
                       </button>
                     </div>
                   </div>
-                  <div class="field field-required">
+                  <div class="field field-required field-half">
                     <div class="field-input-wrapper">
-                      <label class="field-label" for="billing_address_address1">Phone</label>
-                      <input placeholder="Phone" autocapitalize="off" spellcheck="false" class="field-input" size="30"
-                        type="text" value="" />
+                      <label class="field-label" for="billing_address_address1">Expiration date (MM / YY)</label>
+                      <input placeholder="Expiration date (MM / YY)" autocapitalize="off" spellcheck="false"
+                        class="field-input" size="30" type="text" value="" />
+                    </div>
+                  </div>
+                  <div class="field field-required field-half">
+                    <div class="field-input-wrapper">
+                      <label class="field-label" for="billing_address_address1">Security code</label>
+                      <input placeholder="Security code" autocapitalize="off" spellcheck="false" class="field-input"
+                        size="30" type="text" value="" />
                       <button class="icon_phone">
                         <span>
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" focusable="false"
@@ -214,246 +300,384 @@
                       </button>
                     </div>
                   </div>
-                </div>
-              </div>
-              <div class="shipping">
-                <h3>Shipping method</h3>
-                <div class="shipping_wrap">
-                  <p>Enter your shipping address to view available shipping methods.</p>
-                </div>
-              </div>
-              <div class="section_heading">
-                <h2 class="title">Delivery</h2>
-                <p>All transactions are secure and encrypted.</p>
-              </div>
-              <div class="payment">
-                <div class="radio-wrapper content-box-row active  is--shown">
-                  <label class="radio-label" for="payment_1">
-                    <div class="radio-input payment-method-checkbox">
-                      <input type-id="1" id="payment_1" class="input-radio" name="payment_method_id" type="radio"
-                        value="1002923036" checked="">
-                      <div>
-                        <span class="radio-label-primary">Thanh toán khi giao hàng (COD)</span>
-                        <span class="quick-tagline hidden"></span>
-                      </div>
+                  <div class="field field-required">
+                    <div class="field-input-wrapper">
+                      <label class="field-label" for="billing_address_address1">Name on card</label>
+                      <input placeholder="Name on card" autocapitalize="off" spellcheck="false" class="field-input"
+                        size="30" type="text" value="" />
                     </div>
-                    <div class="radio-content-input">
+                  </div>
+                  <div class="field checkbox-wrapper">
+                    <div class="checkbox-input checkbox_select">
+                      <input id="use_shipping" type="checkbox" class="input-checkbox" name="" id="" checked />
+                      <div class="checkbox_icon">
+                        <span>
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" focusable="false"
+                            aria-hidden="true" class="a8x1wuo _1fragemgc _1fragemig _1frageme8 _1frageme4">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                              d="m12.1 2.8-5.877 8.843a.35.35 0 0 1-.54.054L1.4 7.4"></path>
+                          </svg>
+                        </span>
+                      </div>
+                      <label class="field-label" for="use_shipping">
+                        Use shipping address as billing address
+                      </label>
+                    </div>
+                    <div class="delivery billing_address">
+                      <div class="section_heading">
+                        <h2 class="title">Billing address</h2>
+                      </div>
+                      <div class="fieldset">
+                        <div class="field field-show-floating-label field-required">
+                          <div class="field-input-wrapper field-input-wrapper-select">
+                            <label class="field-label" for="customer_shipping_district">Quận / huyện</label>
+                            <select class="field-input" id="customer_shipping_district"
+                              name="customer_shipping_district">
+                              <option data-code="null" value="null" selected="">
+                                Chọn quận / huyện
+                              </option>
+                            </select>
+                            <button class="select_icon">
+                              <span class="selec">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" focusable="false"
+                                  aria-hidden="true" class="a8x1wuo _1fragemgc _1fragemig _1frageme8 _1frageme4">
+                                  <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="m11.9 5.6-4.653 4.653a.35.35 0 0 1-.495 0L2.1 5.6"></path>
+                                </svg>
+                              </span>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="field field-half">
+                          <div class="field-input-wrapper">
+                            <label class="field-label" for="checkout_user_email">First name (optional)</label>
+                            <input placeholder="First name (optional)" autocapitalize="off" spellcheck="false"
+                              class="field-input" size="30" type="text" id="checkout_user_email"
+                              name="checkout_user[email]" value="">
+                          </div>
+                        </div>
+                        <div class="field field-half">
+                          <div class="field-input-wrapper">
+                            <label class="field-label" for="checkout_user_email">Last name</label>
+                            <input autocomplete="false" placeholder="Last name" autocapitalize="off" spellcheck="false"
+                              class="field-input" size="30" type="text">
+                          </div>
+                        </div>
+                        <div class="field field-required">
+                          <div class="field-input-wrapper">
+                            <label class="field-label" for="billing_address_address1">Postal code</label>
+                            <input placeholder="Postal code" autocapitalize="off" spellcheck="false" class="field-input"
+                              size="30" type="text" value="">
+                          </div>
+                        </div>
+                        <div class="field field-required">
+                          <div class="field-input-wrapper">
+                            <label class="field-label" for="billing_address_address1">Address</label>
+                            <input placeholder="Address" autocapitalize="off" spellcheck="false" class="field-input"
+                              size="30" type="text" id="billing_address_address1" name="billing_address[address1]"
+                              value="">
+                          </div>
+                        </div>
+                        <div class="field field-required">
+                          <div class="field-input-wrapper">
+                            <label class="field-label" for="billing_address_address1">Apartment, suite, etc.
+                              (optional)</label>
+                            <input placeholder="Apartment, suite, etc. (optional)" autocapitalize="off"
+                              spellcheck="false" class="field-input" size="30" type="text" id="billing_address_address1"
+                              name="billing_address[address1]" value="">
+                          </div>
+                        </div>
+                        <div class="field field-half">
+                          <div class="field-input-wrapper">
+                            <label class="field-label" for="checkout_user_email">City</label>
+                            <input autocomplete="false" placeholder="City" autocapitalize="off" spellcheck="false"
+                              class="field-input" size="30" type="text">
+                          </div>
+                        </div>
+                        <div class="field field-half">
+                          <div class="field-input-wrapper">
+                            <select class="field-input">
+                              <option data-code="null" value="null" selected="">
+                                Sate
+                              </option>
+                            </select>
+                            <button>
+                              <span class="selec">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" focusable="false"
+                                  aria-hidden="true" class="a8x1wuo _1fragemgc _1fragemig _1frageme8 _1frageme4">
+                                  <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="m11.9 5.6-4.653 4.653a.35.35 0 0 1-.495 0L2.1 5.6"></path>
+                                </svg>
+                              </span>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="field field-required">
+                          <div class="field-input-wrapper">
+                            <label class="field-label" for="billing_address_address1">Phone</label>
+                            <input placeholder="Phone" autocapitalize="off" spellcheck="false" class="field-input"
+                              size="30" type="text" value="">
+                            <button class="icon_phone">
+                              <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" focusable="false"
+                                  aria-label="More information"
+                                  class="a8x1wuo _1fragemgc _1fragemig _1frageme8 _1frageme4">
+                                  <circle cx="7" cy="7" r="5.6"></circle>
+                                  <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M5.6 5.1c.2-1.3 2.6-1.3 2.8 0S6.95 6.4 6.95 7.45m.055 2.35H7v.005h.005z">
+                                  </path>
+                                  <circle cx="7" cy="9.7" r="0.1"></circle>
+                                </svg>
+                              </span>
 
-                      <img alt="VISA"
-                        src="https://cdn.shopify.com/shopifycloud/checkout-web/assets/0169695890db3db16bfe.svg"
-                        role="img" width="38" height="24">
-                      <img alt="MASTERCARD"
-                        src="https://cdn.shopify.com/shopifycloud/checkout-web/assets/ae9ceec48b1dc489596c.svg"
-                        role="img" width="38" height="24">
-                      <img alt="AMEX"
-                        src="https://cdn.shopify.com/shopifycloud/checkout-web/assets/f11b90c2972f3811f2d5.svg"
-                        role="img" width="38" height="24">
-                      <img alt="UNIONPAY"
-                        src="https://cdn.shopify.com/shopifycloud/checkout-web/assets/bddb21e40274706727fb.svg"
-                        role="img" width="38" height="24">
-                    </div>
-                  </label>
-                  <div class="creditCards">
-                    <div class="fieldset">
-                      <div class="field field-required">
-                        <div class="field-input-wrapper">
-                          <label class="field-label" for="billing_address_address1">Card number</label>
-                          <input placeholder="Card number" autocapitalize="off" spellcheck="false" class="field-input"
-                            size="30" type="text" value="" />
-                          <button class="icon_phone">
-                            <span>
-                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" focusable="false"
-                                aria-hidden="true" class="a8x1wuo _1fragemgc _1fragemig _1frageme8 _1frageme4">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                  d="M3.5 6.3c0-2.298 1.131-4.9 3.5-4.9s3.5 2.602 3.5 4.9m-8.4.47v5.36c0 .26.21.47.47.47h8.86c.26 0 .47-.21.47-.47V6.77a.47.47 0 0 0-.47-.47H2.57a.47.47 0 0 0-.47.47">
-                                </path>
-                              </svg>
-                            </span>
-                            </span>
-                          </button>
+                            </button>
+                          </div>
                         </div>
                       </div>
-                      <div class="field field-required field-half">
-                        <div class="field-input-wrapper">
-                          <label class="field-label" for="billing_address_address1">Expiration date (MM / YY)</label>
-                          <input placeholder="Expiration date (MM / YY)" autocapitalize="off" spellcheck="false" class="field-input"
-                            size="30" type="text" value="" />
-                        </div>
-                      </div>
-                      <div class="field field-required field-half">
-                        <div class="field-input-wrapper">
-                          <label class="field-label" for="billing_address_address1">Security code</label>
-                          <input placeholder="Security code" autocapitalize="off" spellcheck="false" class="field-input"
-                            size="30" type="text" value="" />
-                          <button class="icon_phone">
-                            <span>
-                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" focusable="false"
-                                aria-label="More information"
-                                class="a8x1wuo _1fragemgc _1fragemig _1frageme8 _1frageme4">
-                                <circle cx="7" cy="7" r="5.6"></circle>
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                  d="M5.6 5.1c.2-1.3 2.6-1.3 2.8 0S6.95 6.4 6.95 7.45m.055 2.35H7v.005h.005z"></path>
-                                <circle cx="7" cy="9.7" r="0.1"></circle>
-                              </svg>
-                            </span>
-                            </span>
-                          </button>
-                        </div>
-                      </div>
-                      <div class="field field-required">
-                        <div class="field-input-wrapper">
-                          <label class="field-label" for="billing_address_address1">Name on card</label>
-                          <input placeholder="Name on card" autocapitalize="off" spellcheck="false" class="field-input"
-                            size="30" type="text" value="" />
-                        </div>
-                      </div>
-                    <div class="field checkbox-wrapper">
-                      <div class="checkbox-input">
-                        <input id="use_shipping" type="checkbox" class="input-checkbox" name="" id="" />
-                        <div class="checkbox_icon">
-                          <span>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" focusable="false"
-                              aria-hidden="true" class="a8x1wuo _1fragemgc _1fragemig _1frageme8 _1frageme4">
-                              <path stroke-linecap="round" stroke-linejoin="round"
-                                d="m12.1 2.8-5.877 8.843a.35.35 0 0 1-.54.054L1.4 7.4"></path>
-                            </svg>
-                          </span>
-                        </div>
-                        <label class="field-label" for="use_shipping">
-                         Use shipping address as billing address
-                        </label>
-                      </div>
-                  </div>
                     </div>
                   </div>
                 </div>
-                <div class="radio-wrapper content-box-row  is--shown">
-                  <label class="radio-label " for="payment_2">
-                    <div class="radio-input payment-method-checkbox">
-                      <input type-id="1" id="payment_2" class="input-radio" name="payment_method_id" type="radio"
-                        value="1002923036">
-                      <div>
-                        <span class="radio-label-primary">PayPal</span>
-                        <span class="quick-tagline hidden"></span>
-                      </div>
-                    </div>
-                    <div class="radio-content-input">
-                      <div class="hwZCn">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" preserveAspectRatio="xMidYMid"
-                          viewBox="0 0 196 50" role="img" aria-label="PayPal" class="GeSb3">
-                          <g clip-path="url(#paypal-logo_svg__a)">
-                            <path fill="#253B80" fill-rule="evenodd"
-                              d="M62.268 11.182h10.816c3.62 0 6.346 1 7.884 2.893 1.4 1.723 1.863 4.183 1.379 7.315-1.074 7.157-5.186 10.769-12.31 10.769h-3.425c-.738 0-1.37.563-1.483 1.33l-1.18 7.837c-.116.767-.745 1.33-1.485 1.33H57.3c-.555 0-.979-.516-.892-1.09l4.375-29.055c.115-.766.745-1.33 1.485-1.33Zm5.634 14.678c2.867 0 5.833 0 6.424-4.066.217-1.428.043-2.462-.525-3.158-.952-1.166-2.794-1.166-4.748-1.166h-.748c-.442 0-.822.338-.89.797L66.27 25.86zM100.235 21.664h5.179c.554 0 .976.518.887 1.09l-2.799 18.571c-.117.767-.743 1.33-1.485 1.33h-4.665c-.552 0-.976-.516-.89-1.093l.232-1.507s-2.558 3.106-7.17 3.106c-2.686 0-4.945-.812-6.523-2.76-1.721-2.12-2.425-5.158-1.93-8.336.952-6.37 5.84-10.912 11.564-10.912 2.496 0 4.996.57 6.118 2.275l.362.55.23-1.517a.91.91 0 0 1 .89-.797m-7.884 15.74c2.996 0 5.344-2.08 5.844-5.18.226-1.501-.087-2.863-.876-3.839-.788-.966-1.984-1.478-3.454-1.478-2.95 0-5.338 2.15-5.804 5.223-.244 1.507.047 2.86.812 3.812.772.958 1.974 1.463 3.478 1.463Z"
-                              clip-rule="evenodd"></path>
-                            <path fill="#253B80"
-                              d="M132.999 21.663h-5.204c-.497 0-.963.259-1.245.69l-7.179 11.079-3.042-10.646c-.192-.666-.779-1.123-1.443-1.123h-5.114c-.622 0-1.054.636-.856 1.25l5.733 17.625-5.39 7.97c-.424.629.003 1.492.736 1.492h5.198c.493 0 .955-.252 1.235-.676l17.312-26.178c.414-.626-.011-1.483-.741-1.483">
-                            </path>
-                            <path fill="#179BD7" fill-rule="evenodd"
-                              d="M139.415 11.182h10.818c3.62 0 6.345 1 7.88 2.893 1.4 1.723 1.867 4.183 1.381 7.315-1.075 7.157-5.186 10.769-12.312 10.769h-3.423c-.738 0-1.369.563-1.483 1.33l-1.242 8.237c-.08.537-.521.93-1.037.93h-5.551c-.552 0-.976-.516-.889-1.09l4.375-29.055c.115-.766.744-1.33 1.483-1.33Zm5.642 14.678c2.869 0 5.835 0 6.425-4.066.216-1.428.044-2.462-.524-3.158-.952-1.166-2.796-1.166-4.748-1.166h-.748c-.444 0-.821.338-.889.797l-1.146 7.593zM177.383 21.663h5.176c.555 0 .979.52.894 1.09l-2.801 18.572c-.116.767-.745 1.33-1.484 1.33h-4.664c-.555 0-.979-.516-.892-1.093l.231-1.508s-2.557 3.107-7.169 3.107c-2.687 0-4.942-.812-6.524-2.76-1.72-2.12-2.421-5.158-1.928-8.336.953-6.37 5.84-10.912 11.563-10.912 2.496 0 4.995.57 6.116 2.275l.364.55.229-1.518a.91.91 0 0 1 .889-.797m-7.881 15.742c2.995 0 5.347-2.081 5.844-5.181.229-1.501-.084-2.863-.877-3.84-.787-.965-1.983-1.477-3.454-1.477-2.949 0-5.334 2.149-5.804 5.222-.24 1.508.048 2.862.813 3.813.772.957 1.977 1.463 3.478 1.463"
-                              clip-rule="evenodd"></path>
-                            <path fill="#179BD7"
-                              d="m188.67 11.979-4.44 29.588c-.087.573.337 1.09.889 1.09h4.463c.742 0 1.371-.563 1.485-1.33l4.378-29.055c.087-.573-.337-1.092-.889-1.092h-4.998c-.441.002-.82.34-.888.799">
-                            </path>
-                            <path fill="#253B80"
-                              d="m11.493 48.304.827-5.504-1.842-.045H1.68L7.794 2.141a.54.54 0 0 1 .17-.318.5.5 0 0 1 .327-.126h14.834c4.925 0 8.324 1.073 10.098 3.193.832.994 1.362 2.032 1.618 3.176.27 1.2.274 2.632.011 4.38l-.019.128v1.12l.832.494c.7.39 1.258.835 1.685 1.345.711.85 1.172 1.93 1.366 3.211.2 1.317.134 2.885-.194 4.66-.38 2.04-.994 3.818-1.822 5.273-.763 1.34-1.734 2.452-2.887 3.314-1.1.818-2.408 1.44-3.887 1.837-1.433.391-3.067.588-4.859.588h-1.154c-.826 0-1.628.312-2.257.87a3.7 3.7 0 0 0-1.177 2.2l-.087.496-1.46 9.7-.067.357c-.018.112-.048.169-.092.207a.24.24 0 0 1-.152.058z">
-                            </path>
-                            <path fill="#179BD7"
-                              d="M36.451 12.703q-.066.445-.152.911c-1.956 10.523-8.65 14.158-17.197 14.158h-4.353c-1.045 0-1.926.795-2.089 1.876l-2.228 14.805L9.8 48.65c-.106.709.416 1.349 1.099 1.349h7.72c.913 0 1.69-.696 1.834-1.64l.076-.412 1.453-9.662.094-.53c.142-.948.92-1.644 1.834-1.644h1.155c7.479 0 13.334-3.181 15.045-12.387.715-3.845.345-7.056-1.547-9.314-.572-.681-1.283-1.246-2.113-1.707Z">
-                            </path>
-                            <path fill="#222D65"
-                              d="M34.4 11.847a15 15 0 0 0-1.902-.442c-1.173-.199-2.459-.293-3.836-.293H17.034c-.286 0-.558.068-.802.19-.536.27-.934.802-1.03 1.453l-2.475 16.413-.07.479c.162-1.08 1.043-1.876 2.089-1.876h4.352c8.548 0 15.241-3.637 17.197-14.158q.087-.466.152-.91a10 10 0 0 0-1.608-.712 15 15 0 0 0-.438-.144Z">
-                            </path>
-                            <path fill="#253B80"
-                              d="M15.205 12.756a1.93 1.93 0 0 1 1.031-1.451c.245-.123.516-.19.802-.19h11.627c1.378 0 2.663.094 3.837.292a15 15 0 0 1 2.342.585q.867.3 1.609.711c.582-3.889-.005-6.536-2.012-8.934C32.228 1.13 28.235 0 23.125 0H8.29C7.247 0 6.356.795 6.195 1.877L.015 42.91c-.121.812.477 1.544 1.258 1.544h9.159l2.3-15.284z">
-                            </path>
-                          </g>
-                          <defs>
-                            <clipPath id="paypal-logo_svg__a">
-                              <path fill="#fff" d="M0 0h195.456v50H0z"></path>
-                            </clipPath>
-                          </defs>
-                        </svg>
-                      </div>
-                    </div>
-                  </label>
-                  <div class="creditCards">
-                   <p>
-                    After clicking "Pay with PayPal", you will be redirected to PayPal to complete your purchase securely.
-                   </p>
-                  </div>
-                </div>
-              
               </div>
-                <div class="btn_checkout">
-                  <button type="submit" >
-                    <span >
-                      Pay now
-                    </span>
-                  </button>
+            </div>
+            <div class="radio-wrapper content-box-row  is--shown">
+              <label class="radio-label " for="payment_2">
+                <div class="radio-input payment-method-checkbox">
+                  <input type-id="1" id="payment_2" class="input-radio" name="payment_method_id" type="radio"
+                    value="1002923036">
+                  <div>
+                    <span class="radio-label-primary">PayPal</span>
+                    <span class="quick-tagline hidden"></span>
+                  </div>
                 </div>
+                <div class="radio-content-input">
+                  <div class="hwZCn">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" preserveAspectRatio="xMidYMid"
+                      viewBox="0 0 196 50" role="img" aria-label="PayPal" class="GeSb3">
+                      <g clip-path="url(#paypal-logo_svg__a)">
+                        <path fill="#253B80" fill-rule="evenodd"
+                          d="M62.268 11.182h10.816c3.62 0 6.346 1 7.884 2.893 1.4 1.723 1.863 4.183 1.379 7.315-1.074 7.157-5.186 10.769-12.31 10.769h-3.425c-.738 0-1.37.563-1.483 1.33l-1.18 7.837c-.116.767-.745 1.33-1.485 1.33H57.3c-.555 0-.979-.516-.892-1.09l4.375-29.055c.115-.766.745-1.33 1.485-1.33Zm5.634 14.678c2.867 0 5.833 0 6.424-4.066.217-1.428.043-2.462-.525-3.158-.952-1.166-2.794-1.166-4.748-1.166h-.748c-.442 0-.822.338-.89.797L66.27 25.86zM100.235 21.664h5.179c.554 0 .976.518.887 1.09l-2.799 18.571c-.117.767-.743 1.33-1.485 1.33h-4.665c-.552 0-.976-.516-.89-1.093l.232-1.507s-2.558 3.106-7.17 3.106c-2.686 0-4.945-.812-6.523-2.76-1.721-2.12-2.425-5.158-1.93-8.336.952-6.37 5.84-10.912 11.564-10.912 2.496 0 4.996.57 6.118 2.275l.362.55.23-1.517a.91.91 0 0 1 .89-.797m-7.884 15.74c2.996 0 5.344-2.08 5.844-5.18.226-1.501-.087-2.863-.876-3.839-.788-.966-1.984-1.478-3.454-1.478-2.95 0-5.338 2.15-5.804 5.223-.244 1.507.047 2.86.812 3.812.772.958 1.974 1.463 3.478 1.463Z"
+                          clip-rule="evenodd"></path>
+                        <path fill="#253B80"
+                          d="M132.999 21.663h-5.204c-.497 0-.963.259-1.245.69l-7.179 11.079-3.042-10.646c-.192-.666-.779-1.123-1.443-1.123h-5.114c-.622 0-1.054.636-.856 1.25l5.733 17.625-5.39 7.97c-.424.629.003 1.492.736 1.492h5.198c.493 0 .955-.252 1.235-.676l17.312-26.178c.414-.626-.011-1.483-.741-1.483">
+                        </path>
+                        <path fill="#179BD7" fill-rule="evenodd"
+                          d="M139.415 11.182h10.818c3.62 0 6.345 1 7.88 2.893 1.4 1.723 1.867 4.183 1.381 7.315-1.075 7.157-5.186 10.769-12.312 10.769h-3.423c-.738 0-1.369.563-1.483 1.33l-1.242 8.237c-.08.537-.521.93-1.037.93h-5.551c-.552 0-.976-.516-.889-1.09l4.375-29.055c.115-.766.744-1.33 1.483-1.33Zm5.642 14.678c2.869 0 5.835 0 6.425-4.066.216-1.428.044-2.462-.524-3.158-.952-1.166-2.796-1.166-4.748-1.166h-.748c-.444 0-.821.338-.889.797l-1.146 7.593zM177.383 21.663h5.176c.555 0 .979.52.894 1.09l-2.801 18.572c-.116.767-.745 1.33-1.484 1.33h-4.664c-.555 0-.979-.516-.892-1.093l.231-1.508s-2.557 3.107-7.169 3.107c-2.687 0-4.942-.812-6.524-2.76-1.72-2.12-2.421-5.158-1.928-8.336.953-6.37 5.84-10.912 11.563-10.912 2.496 0 4.995.57 6.116 2.275l.364.55.229-1.518a.91.91 0 0 1 .889-.797m-7.881 15.742c2.995 0 5.347-2.081 5.844-5.181.229-1.501-.084-2.863-.877-3.84-.787-.965-1.983-1.477-3.454-1.477-2.949 0-5.334 2.149-5.804 5.222-.24 1.508.048 2.862.813 3.813.772.957 1.977 1.463 3.478 1.463"
+                          clip-rule="evenodd"></path>
+                        <path fill="#179BD7"
+                          d="m188.67 11.979-4.44 29.588c-.087.573.337 1.09.889 1.09h4.463c.742 0 1.371-.563 1.485-1.33l4.378-29.055c.087-.573-.337-1.092-.889-1.092h-4.998c-.441.002-.82.34-.888.799">
+                        </path>
+                        <path fill="#253B80"
+                          d="m11.493 48.304.827-5.504-1.842-.045H1.68L7.794 2.141a.54.54 0 0 1 .17-.318.5.5 0 0 1 .327-.126h14.834c4.925 0 8.324 1.073 10.098 3.193.832.994 1.362 2.032 1.618 3.176.27 1.2.274 2.632.011 4.38l-.019.128v1.12l.832.494c.7.39 1.258.835 1.685 1.345.711.85 1.172 1.93 1.366 3.211.2 1.317.134 2.885-.194 4.66-.38 2.04-.994 3.818-1.822 5.273-.763 1.34-1.734 2.452-2.887 3.314-1.1.818-2.408 1.44-3.887 1.837-1.433.391-3.067.588-4.859.588h-1.154c-.826 0-1.628.312-2.257.87a3.7 3.7 0 0 0-1.177 2.2l-.087.496-1.46 9.7-.067.357c-.018.112-.048.169-.092.207a.24.24 0 0 1-.152.058z">
+                        </path>
+                        <path fill="#179BD7"
+                          d="M36.451 12.703q-.066.445-.152.911c-1.956 10.523-8.65 14.158-17.197 14.158h-4.353c-1.045 0-1.926.795-2.089 1.876l-2.228 14.805L9.8 48.65c-.106.709.416 1.349 1.099 1.349h7.72c.913 0 1.69-.696 1.834-1.64l.076-.412 1.453-9.662.094-.53c.142-.948.92-1.644 1.834-1.644h1.155c7.479 0 13.334-3.181 15.045-12.387.715-3.845.345-7.056-1.547-9.314-.572-.681-1.283-1.246-2.113-1.707Z">
+                        </path>
+                        <path fill="#222D65"
+                          d="M34.4 11.847a15 15 0 0 0-1.902-.442c-1.173-.199-2.459-.293-3.836-.293H17.034c-.286 0-.558.068-.802.19-.536.27-.934.802-1.03 1.453l-2.475 16.413-.07.479c.162-1.08 1.043-1.876 2.089-1.876h4.352c8.548 0 15.241-3.637 17.197-14.158q.087-.466.152-.91a10 10 0 0 0-1.608-.712 15 15 0 0 0-.438-.144Z">
+                        </path>
+                        <path fill="#253B80"
+                          d="M15.205 12.756a1.93 1.93 0 0 1 1.031-1.451c.245-.123.516-.19.802-.19h11.627c1.378 0 2.663.094 3.837.292a15 15 0 0 1 2.342.585q.867.3 1.609.711c.582-3.889-.005-6.536-2.012-8.934C32.228 1.13 28.235 0 23.125 0H8.29C7.247 0 6.356.795 6.195 1.877L.015 42.91c-.121.812.477 1.544 1.258 1.544h9.159l2.3-15.284z">
+                        </path>
+                      </g>
+                      <defs>
+                        <clipPath id="paypal-logo_svg__a">
+                          <path fill="#fff" d="M0 0h195.456v50H0z"></path>
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </div>
+                </div>
+              </label>
+              <div class="creditCards">
+                <p>
+                  After clicking "Pay with PayPal", you will be redirected to PayPal to complete your purchase
+                  securely.
+                </p>
+              </div>
+            </div>
+
+          </div>
+          <div class="remember_me">
+            <div class="section_heading">
+              <h2 class="title">Remember me</h2>
+            </div>
+            <div class="content-box-wrapper">
+              <div class="fieldset">
+                <div class="field checkbox-wrapper">
+                  <div class="checkbox-input">
+                    <input id="remem_me" type="checkbox" class="input-checkbox" checked>
+                    <div class="checkbox_icon">
+                      <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" focusable="false" aria-hidden="true"
+                          class="a8x1wuo _1fragemgc _1fragemig _1frageme8 _1frageme4">
+                          <path stroke-linecap="round" stroke-linejoin="round"
+                            d="m12.1 2.8-5.877 8.843a.35.35 0 0 1-.54.054L1.4 7.4"></path>
+                        </svg>
+                      </span>
+                    </div>
+                    <label class="field-label" for="remem_me">
+                      Save my information for a faster checkout
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="content-box-row">
+                <div class="fieldset">
+                  <div class="field field-required">
+                    <div class="field-input-wrapper">
+                      <label class="field-label" >Mobile phone number</label>
+                      <input autocapitalize="off" spellcheck="false" class="field-input" size="30"
+                        type="text" value="+55">
+                      <button class="icon_phone2">
+                        <span>
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" focusable="false"
+                            aria-hidden="true" class="a8x1wuo _1fragemgc _1fragemig _1frageme8 _1frageme4">
+                            <path stroke-linejoin="round"
+                              d="M3.5 12V2a.6.6 0 0 1 .6-.6h5.8a.6.6 0 0 1 .6.6v10a.6.6 0 0 1-.6.6H4.1a.6.6 0 0 1-.6-.6">
+                            </path>
+                            <circle cx="7" cy="9.8" r="0.4"></circle>
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M7.002 9.798h-.005v.005h.005z">
+                            </path>
+                          </svg>
+                        </span>
+
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <span class="txt_t">Next time you check out here or on other stores powered by Shopify, you’ll receive a code by text
+                  message to securely purchase with Shop Pay.</span>
+                <span class="txt_b">By continuing, you agree to Shop Pay’s
+                  <a href="#">Privacy Policy<span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"
+                        focusable="false" aria-hidden="true"
+                        class="a8x1wuo _1fragemgc _1fragemig _1frageme8 _1frageme4">
+                        <path stroke-linecap="round"
+                          d="M6.3 2.1H2.7a.6.6 0 0 0-.6.6v8.6a.6.6 0 0 0 .6.6h8.6a.6.6 0 0 0 .6-.6V7.7m.7-2.8V1.6a.2.2 0 0 0-.2-.2H9.1M7 7l5-5">
+                        </path>
+                      </svg></span></a>
+                      and
+                      <a href="#">Terms of Service<span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"
+                        focusable="false" aria-hidden="true"
+                        class="a8x1wuo _1fragemgc _1fragemig _1frageme8 _1frageme4">
+                        <path stroke-linecap="round"
+                          d="M6.3 2.1H2.7a.6.6 0 0 0-.6.6v8.6a.6.6 0 0 0 .6.6h8.6a.6.6 0 0 0 .6-.6V7.7m.7-2.8V1.6a.2.2 0 0 0-.2-.2H9.1M7 7l5-5">
+                        </path>
+                      </svg></span></a>
+                </span>
+              </div>
             </div>
           </div>
-          <div class="col-12 col-md-6 col-lg-6">
-            <div class="sidebar">
-              <div class="wrapper">
-                <div class="product-list">
-                  <div class="item-product">
-                    <div class="image-product">
-                      <img src="images/product_1.avif" alt="">
-                      <span class="count">2</span>
+          <div class="btn_checkout">
+            <button type="submit">
+              <span>
+                Pay now
+              </span>
+            </button>
+          </div>
+        </div>
+        <footer class="footer_desktop">
+          <div class="footer_wrapper">
+            <div class="footer_wrapper_left">
+              <button><span>Refund policy</span></button>
+              <button><span>Shipping policy</span></button>
+              <button><span>Privacy policy</span></button>
+              <button><span>Terms of service</span></button>
+            </div>
+          </div>
+        </footer>
+      </div>
+      <div class="content_right">
+        <div class="sidebar">
+          <div class="wrapper">
+            <div class="product-list">
+              <div class="item-product">
+                <div class="image-product">
+                  <img src="images/product_1.avif" alt="">
+                  <span class="count">2</span>
+                </div>
+                <div class="info-product">
+                  <div class="left-info">
+                    <div class="name-product">Balabala Toddler Girl New Year Season Knitted Long Sleeve Sweatshirt
                     </div>
-                    <div class="info-product">
-                      <div class="left-info">
-                        <div class="name-product">Balabala Toddler Girl New Year Season Knitted Long Sleeve Sweatshirt</div>
-                        <div class="variant-product">Off-White / 110</div>
-                      </div>
-                    </div>
-                    <div class="right-info">
-                      <div class="price-product">₫2,836,000</div>
-                    </div>
+                    <div class="variant-product">Off-White / 110</div>
                   </div>
                 </div>
-                <div class="discount-wrapper">
-                  <input type="text" placeholder="Discount code">
-                  <button type="button">Apply</button>
-                </div>
-                <div class="total-wrapper">
-                  <div class="item sub-total">
-                    <div class="title">Subtotal</div>
-                    <div class="value price">₫5,672,000</div>
-                  </div>
-                  <div class="item coupon">
-                    <div class="title">Order discount</div>
-                    <div class="value price">₫5,672,000</div>
-                  </div>
-                  <div class="item discount">
-                    <div class="title">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" focusable="false" aria-hidden="true" class="a8x1wuo _1fragemgc _1fragemig _1frageme8 _1frageme4"><path stroke-linecap="round" d="M7.284 1.402h4.964a.35.35 0 0 1 .35.35v4.964a.7.7 0 0 1-.205.495L7.49 12.115a.7.7 0 0 1-.99 0L1.885 7.5a.7.7 0 0 1 0-.99L6.79 1.607a.7.7 0 0 1 .495-.205Z"></path><circle cx="9.1" cy="4.9" r="0.7"></circle><path stroke-linecap="round" stroke-linejoin="round" d="M9.102 4.897h-.005v.005h.005z"></path></svg>
-                      <span>$20 OFF ORDERS OF $200+</span>
-                    </div>
-                    <div class="value price">− ₫498,274</div>
-                  </div>
-                  <div class="item sphipping">
-                    <div class="title">Shipping
-                    </div>
-                    <div class="value price">Free</div>
-                  </div>
-                  <div class="item total">
-                    <div class="title">Total</div>
-                    <div class="value price"><span>VND</span> ₫5,173,726</div>
-                  </div>
-                </div>
-                <div class="total-saving">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" focusable="false" aria-hidden="true" class="a8x1wuo _1fragemgc _1fragemig _1frageme8 _1frageme4"><path stroke-linecap="round" stroke-linejoin="round" d="m10.802 15.686 5.367-5.368a.15.15 0 0 0 .046-.109V4.144m-2.998-.95h-5.67a.16.16 0 0 0-.11.046L1.779 8.897a.154.154 0 0 0 0 .219l5.594 5.593c.06.06.158.06.218 0l5.658-5.657a.15.15 0 0 0 .045-.11v-5.67a.077.077 0 0 0-.077-.077Zm-3.06 3.749a.643.643 0 1 1-1.286 0 .643.643 0 0 1 1.286 0m-.648-.005h.01v.01h-.01z"></path></svg>
-                  <span>TOTAL SAVINGS ₫498,274</span>
+                <div class="right-info">
+                  <div class="price-product">₫2,836,000</div>
                 </div>
               </div>
+            </div>
+            <div class="discount-wrapper">
+              <div class="fieldset">
+                <div class="field field-required">
+                  <div class="field-input-wrapper">
+                    <label class="field-label" for="discount">Address</label>
+                    <input placeholder="Discount code" autocapitalize="off" spellcheck="false" class="field-input"
+                      size="30" type="text" id="discount">
+                  </div>
+                </div>
+              </div>
+              <button type="button">Apply</button>
+            </div>
+            <div class="total-wrapper">
+              <div class="item sub-total">
+                <div class="title">Subtotal</div>
+                <div class="value price">₫5,672,000</div>
+              </div>
+              <div class="item coupon">
+                <div class="title">Order discount</div>
+                <div class="value price">₫5,672,000</div>
+              </div>
+              <div class="item discount">
+                <div class="title">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" focusable="false" aria-hidden="true"
+                    class="a8x1wuo _1fragemgc _1fragemig _1frageme8 _1frageme4">
+                    <path stroke-linecap="round"
+                      d="M7.284 1.402h4.964a.35.35 0 0 1 .35.35v4.964a.7.7 0 0 1-.205.495L7.49 12.115a.7.7 0 0 1-.99 0L1.885 7.5a.7.7 0 0 1 0-.99L6.79 1.607a.7.7 0 0 1 .495-.205Z">
+                    </path>
+                    <circle cx="9.1" cy="4.9" r="0.7"></circle>
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.102 4.897h-.005v.005h.005z"></path>
+                  </svg>
+                  <span>$20 OFF ORDERS OF <br> $200+</span>
+                </div>
+                <div class="value price">− ₫498,274</div>
+              </div>
+              <div class="item sphipping">
+                <div class="title">Shipping
+                </div>
+                <div class="value price">Free</div>
+              </div>
+              <div class="item total">
+                <div class="title">Total</div>
+                <div class="value price"><span>VND</span> ₫5,173,726</div>
+              </div>
+            </div>
+            <div class="total-saving">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" focusable="false" aria-hidden="true"
+                class="a8x1wuo _1fragemgc _1fragemig _1frageme8 _1frageme4">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="m10.802 15.686 5.367-5.368a.15.15 0 0 0 .046-.109V4.144m-2.998-.95h-5.67a.16.16 0 0 0-.11.046L1.779 8.897a.154.154 0 0 0 0 .219l5.594 5.593c.06.06.158.06.218 0l5.658-5.657a.15.15 0 0 0 .045-.11v-5.67a.077.077 0 0 0-.077-.077Zm-3.06 3.749a.643.643 0 1 1-1.286 0 .643.643 0 0 1 1.286 0m-.648-.005h.01v.01h-.01z">
+                </path>
+              </svg>
+              <span>TOTAL SAVINGS </span>
+              <span>₫498,274</span>
             </div>
           </div>
         </div>
       </div>
     </section>
   </main>
+  <footer class="footer_mobile">
+    <div class="footer_wrapper">
+      <div class="footer_wrapper_left">
+        <button><span>Refund policy</span></button>
+        <button><span>Shipping policy</span></button>
+        <button><span>Privacy policy</span></button>
+        <button><span>Terms of service</span></button>
+      </div>
+    </div>
+  </footer>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 

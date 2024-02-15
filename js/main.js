@@ -263,7 +263,15 @@ $(document).ready(function () {
     $(this).addClass("active");
     $(this).closest(".product__info-container").find(".sku-value").html(sku);
   });
-
+  //page checkout
+  $(".is--shown").click(function (e) {
+    $(".is--shown").removeClass("active");
+    $(this).addClass("active");
+  });
+  $(".checkbox_select").click(function (e) {
+     // Ngăn chặn sự kiện nổi (bubbling)
+    console.log(1);
+  });
   // $('.slider-main').slick({
   //   slidesToShow: 1,
   //   slidesToScroll: 1,
@@ -305,7 +313,7 @@ $(document).ready(function () {
   //     items: 1,
   //     slideSpeed: 2000,
   //     nav: true,
-  //     autoplay: false, 
+  //     autoplay: false,
   //     dots: false,
   //     loop: true,
   //     responsiveRefreshRate: 200,
@@ -371,23 +379,23 @@ $(document).ready(function () {
   //     var number = $(this).index();
   //     sync1.data('owl.carousel').to(number, 300, true);
   // });
-// 1st carousel, main
-// $('.slider-main').flickity();
+  // 1st carousel, main
+  // $('.slider-main').flickity();
 
-// $('.slider-nav').flickity({
-//   asNavFor: '.slider-main',
-//   contain: true,
-//   pageDots: false,
-//   verticalCells: true,
-//   groupCells: 8
-// });
+  // $('.slider-nav').flickity({
+  //   asNavFor: '.slider-main',
+  //   contain: true,
+  //   pageDots: false,
+  //   verticalCells: true,
+  //   groupCells: 8
+  // });
 
   // var galleryTop = new Swiper('.slider-main', {
   //   spaceBetween: 10,
-    // navigation: {
-    //   nextEl: '.swiper-button-next',
-    //   prevEl: '.swiper-button-prev',
-    // },
+  // navigation: {
+  //   nextEl: '.swiper-button-next',
+  //   prevEl: '.swiper-button-prev',
+  // },
   // });
   // var galleryThumbs = new Swiper('.slider-nav', {
   //   spaceBetween: 10,
@@ -398,9 +406,8 @@ $(document).ready(function () {
   //   direction: "vertical",
   // });
 
-
   // galleryTop.controller.control = galleryThumbs;
-  // galleryThumbs.controller.control =galleryTop; 
+  // galleryThumbs.controller.control =galleryTop;
   /*end*/
 
   //get height window
