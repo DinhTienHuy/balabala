@@ -156,7 +156,6 @@ h6,
   .main-area {
     .row__product {
       .product__media-left {
-
         padding: 0 15px;
         .main-image {
           flex: 0 0 auto;
@@ -165,6 +164,30 @@ h6,
           box-sizing: border-box;
           padding: 0;
           width: calc(100% - 90px);
+          .swiper-button-next,
+          .swiper-button-prev {
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            text-align: center;
+            transition: all .5s ease;
+            svg {
+              width: 14px;
+              fill: #fff;
+            }
+            &:hover {
+              background-color: #ffc556;
+              border-color: #ffc556;
+            }
+            &:after {
+              display: none;
+            }
+          }
+          .swiper-button-prev svg {
+            transform: rotate(180deg) 
+          }
           @media (max-width: 1024px) {
             width: 100%;
           }
@@ -184,7 +207,11 @@ h6,
             .item-img {
               opacity: 0.5;
               transition: .3s ease-in-out;
-              &.swiper-slide-active {
+              img {
+                object-fit: cover;
+                object-position: center center;
+              }
+              &.swiper-slide-thumb-active {
                 opacity: 1;
               }
             }
@@ -379,11 +406,19 @@ h6,
                       left: 0;
                       text-align: left;
                       padding-left: 15px;
+                      svg {
+                        top: -8px;
+                        position: relative;
+                      }
                     }
                     .is--plus {
                       right: 0;
                       text-align: right;
                       padding-right: 15px;
+                      svg {
+                        top: -2px;
+                        position: relative;
+                      }
                     }
                     input.quantity-input[type="number"] {
                       width: 35px;
@@ -1324,11 +1359,19 @@ h6,
             left: 0;
             text-align: left;
             padding-left: 15px;
+            svg {
+              top: -8px;
+              position: relative;
+            }
           }
           .is--plus {
             right: 0;
             text-align: right;
             padding-right: 15px;
+            svg {
+              top: -2px;
+              position: relative;
+            }
           }
           input.quantity-input[type="number"] {
             width: 35px;
