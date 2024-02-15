@@ -442,8 +442,17 @@
                           <img src="images/pro-detail_10.jpeg" alt="">
                         </div>
                       </div>
+                      <div class="swiper-button-prev">
+                        <svg class="flickityt4s-button-icon" viewBox="0 0 100 100">
+                          <path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow" transform="translate(100, 100) rotate(180) "></path>
+                        </svg>
+                      </div>
+                      <div class="swiper-button-next">
+                        <svg class="flickityt4s-button-icon" viewBox="0 0 100 100">
+                          <path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow" transform="translate(100, 100) rotate(180) "></path>
+                        </svg>
+                      </div>
                     </div>
-
                   </div>
                   <div class="thump-image">
                     <div class="swiper swiper2">
@@ -538,12 +547,16 @@
                         <div class="pr-bt__wrap">
                           <div class="pro-form__qty">
                             <button type="button" class="quantity-selector is--minus">
-                              -
+                              <svg focusable="false" class="icon icon--minus" viewBox="0 0 10 2" role="presentation">
+                                <path d="M10 0v2H0V0z" fill="currentColor"></path>
+                              </svg>
                             </button>
                             <input type="number" class="quantity-input" step="1" min="1" max="42" name="quantity"
                               value="1" size="4" pattern="[0-9]*" inputmode="numeric" />
                             <button type="button" class="quantity-selector is--plus">
-                              +
+                              <svg focusable="false" class="icon icon--plus" viewBox="0 0 10 10" role="presentation">
+                                <path d="M6 4h4v2H6v4H4V6H0V4h4V0h2v4z" fill="currentColor" fill-rule="evenodd"></path>
+                              </svg>
                             </button>
                           </div>
                           <button id="shakingButton" type="submit" name="add" class="pro-form__submit">
@@ -1781,12 +1794,16 @@
         <div class="pr-bt__wrap">
           <div class="pro-form__qty">
             <button type="button" class="quantity-selector is--minus">
-              -
+              <svg focusable="false" class="icon icon--minus" viewBox="0 0 10 2" role="presentation">
+                <path d="M10 0v2H0V0z" fill="currentColor"></path>
+              </svg>
             </button>
             <input type="number" class="quantity-input" step="1" min="1" max="42" name="quantity" value="1" size="4"
               pattern="[0-9]*" inputmode="numeric" />
             <button type="button" class="quantity-selector is--plus">
-              +
+              <svg focusable="false" class="icon icon--plus" viewBox="0 0 10 10" role="presentation">
+                <path d="M6 4h4v2H6v4H4V6H0V4h4V0h2v4z" fill="currentColor" fill-rule="evenodd"></path>
+              </svg>
             </button>
           </div>
           <button id="shakingButton" type="submit" name="add" class="pro-form__submit">
@@ -2409,17 +2426,15 @@
   <script type="text/javascript" src="https://unpkg.com/flickity@2.0.11/dist/flickity.pkgd.min.js"></script>
   <script src="js/main.js"></script>
   <script>
-    var galleryTop = new Swiper('.swiper1', {
-      slidesPerView: '1',
-      effect: "fade",
-    });
     let width = screen.width;
     if (width >= 1025) {
       var galleryThumbs = new Swiper('.swiper2', {
-        spaceBetween: 10,
         slidesPerView: 8,
-        slideToClickedSlide: true,
-        direction: "vertical",
+        direction: 'vertical',
+        watchOverflow: true,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+        spaceBetween: 10,
         loop: true,
         breakpoints: {
           1024: {
@@ -2434,7 +2449,7 @@
           1441: {
             slidesPerView: 7,
           },
-        },
+        }
       });
     }
     else {
@@ -2442,21 +2457,35 @@
         spaceBetween: 5,
         slidesPerView: 4,
         loop: true,
+        watchOverflow: true,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
       });
     }
 
-    $(".swiper2 .swiper-slide").on("click", function () {
-      let index = $(this).attr("data-swiper-slide-index")
-      console.log(index)
-      galleryTop.slideTo(index);
+    var galleryMain = new Swiper(".swiper1", {
+      preventInteractionOnTransition: true,
+      effect: 'fade',
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      fadeEffect: {
+        crossFade: true
+      },
+      thumbs: {
+        swiper: galleryThumbs
+      }
     });
 
-    galleryTop.on('slideChange', function ({realIndex:r,previousIndex:p}) {
-      galleryThumbs.slideTo(r);
-      $(".swiper2 .swiper-slide").removeClass("swiper-slide-active")
-      let elm = $(".swiper2 .swiper-slide[data-swiper-slide-index=" +r+  "]")
-      elm.addClass("swiper-slide-active")
-  });
+    galleryMain.on('slideChangeTransitionStart', function() {
+      galleryThumbs.slideTo(galleryMain.activeIndex);
+    });
+
+    galleryThumbs.on('transitionStart', function(){
+      galleryMain.slideTo(galleryThumbs.activeIndex);
+    });
   </script>
 </body>
 
