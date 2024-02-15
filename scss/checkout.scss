@@ -5,7 +5,7 @@ body {
   color: #222;
 }
 $color_1: #333333;
-$color_2: #767767;
+$color_2: #999999;
 $color_3: #ff6d6d;
 $color_4: #737373;
 $color_5: transparent;
@@ -31,7 +31,7 @@ textarea {
 }
 
 header {
-  @media (max-width: 767px) {
+  @media (max-width: 999px) {
     .container {
       max-width: 608px !important;
     }
@@ -360,7 +360,7 @@ header {
     display: flex;
     align-items: end;
     flex-direction: column;
-    @media (max-width: 767px) {
+    @media (max-width: 999px) {
       justify-content: center;
       align-items: center;
     }
@@ -376,7 +376,7 @@ header {
     background-color: rgb(240, 240, 240);
     display: flex;
     justify-self: start;
-    @media (max-width: 767px) {
+    @media (max-width: 999px) {
       justify-content: center;
       background-color: #ffffff;
     }
@@ -395,7 +395,7 @@ header {
       width: 50%;
     }
   }
-  @media (max-width: 767px) {
+  @media (max-width: 999px) {
     flex-direction: column;
     .content_left,
     .content_right {
@@ -583,6 +583,7 @@ header {
         }
       }
       .content-box-row {
+        display: none;
         padding: 17px;
         background-color: rgba(0, 0, 0, 0.043);
         .fieldset {
@@ -653,6 +654,7 @@ header {
     }
   }
   .billing_address {
+    display: none;
     margin-top: 15px;
     h2 {
       font-size: 17px;
@@ -664,6 +666,9 @@ header {
   padding: 20px;
   .wrapper {
     padding: 20px;
+    @media (max-width: 999px) {
+      padding: 0;
+    }
     .item-product {
       display: flex;
       height: 100%;
@@ -819,13 +824,13 @@ footer {
   &.footer_mobile {
     margin-top: 0;
     display: none;
-    @media (max-width: 767px) {
+    @media (max-width: 999px) {
       display: block;
     }
   }
   &.footer_desktop {
     display: block;
-    @media (max-width: 767px) {
+    @media (max-width: 999px) {
       display: none;
     }
   }

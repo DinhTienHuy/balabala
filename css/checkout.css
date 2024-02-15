@@ -29,7 +29,7 @@ header {
   padding: 21px 0;
   border-bottom: 1px solid #dedede;
 }
-@media (max-width: 767px) {
+@media (max-width: 999px) {
   header .container {
     max-width: 608px !important;
   }
@@ -117,7 +117,7 @@ header .main_header span .cart_link span svg {
   box-sizing: border-box;
   opacity: 0;
   filter: alpha(opacity=0);
-  color: #767767;
+  color: #999999;
   transition: all 0.2s ease-out;
   margin: 0.5em 0;
   margin-top: 0.3em;
@@ -336,7 +336,7 @@ header .main_header span .cart_link span svg {
   align-items: end;
   flex-direction: column;
 }
-@media (max-width: 767px) {
+@media (max-width: 999px) {
   .content .content_left {
     justify-content: center;
     align-items: center;
@@ -353,7 +353,7 @@ header .main_header span .cart_link span svg {
   display: flex;
   justify-self: start;
 }
-@media (max-width: 767px) {
+@media (max-width: 999px) {
   .content .content_right {
     justify-content: center;
     background-color: #ffffff;
@@ -371,7 +371,7 @@ header .main_header span .cart_link span svg {
     width: 50%;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 999px) {
   .content {
     flex-direction: column;
   }
@@ -553,6 +553,7 @@ header .main_header span .cart_link span svg {
   padding: 17px;
 }
 .content__wrapper .remember_me .content-box-wrapper .content-box-row {
+  display: none;
   padding: 17px;
   background-color: rgba(0, 0, 0, 0.043);
 }
@@ -616,6 +617,7 @@ header .main_header span .cart_link span svg {
   background-color: #105989;
 }
 .content__wrapper .billing_address {
+  display: none;
   margin-top: 15px;
 }
 .content__wrapper .billing_address h2 {
@@ -628,6 +630,11 @@ header .main_header span .cart_link span svg {
 }
 .sidebar .wrapper {
   padding: 20px;
+}
+@media (max-width: 999px) {
+  .sidebar .wrapper {
+    padding: 0;
+  }
 }
 .sidebar .wrapper .item-product {
   display: flex;
@@ -787,7 +794,7 @@ footer.footer_mobile {
   margin-top: 0;
   display: none;
 }
-@media (max-width: 767px) {
+@media (max-width: 999px) {
   footer.footer_mobile {
     display: block;
   }
@@ -795,7 +802,7 @@ footer.footer_mobile {
 footer.footer_desktop {
   display: block;
 }
-@media (max-width: 767px) {
+@media (max-width: 999px) {
   footer.footer_desktop {
     display: none;
   }

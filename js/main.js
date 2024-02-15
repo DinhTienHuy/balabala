@@ -269,8 +269,15 @@ $(document).ready(function () {
     $(this).addClass("active");
   });
   $(".checkbox_select").click(function (e) {
-     // Ngăn chặn sự kiện nổi (bubbling)
-    console.log(1);
+    // Ngăn chặn sự kiện nổi (bubbling)
+    $(this).closest(".checkbox-wrapper").find(".billing_address").slideToggle();
+  });
+  $("#remem_me").click(function (e) {
+    // Ngăn chặn sự kiện nổi (bubbling)
+    $(this)
+      .closest(".content-box-wrapper")
+      .find(".content-box-row")
+      .slideToggle();
   });
   // $('.slider-main').slick({
   //   slidesToShow: 1,
