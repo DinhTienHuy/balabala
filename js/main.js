@@ -279,6 +279,10 @@ $(document).ready(function () {
       .find(".content-box-row")
       .slideToggle();
   });
+  $(".summary_wrap_heading").on("click", function (e) {
+    $(this).parent().children(".summary_wrapper").slideToggle();
+    $(this).find("svg").toggleClass("active");
+  });
   // $('.slider-main').slick({
   //   slidesToShow: 1,
   //   slidesToScroll: 1,
