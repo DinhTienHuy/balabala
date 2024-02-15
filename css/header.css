@@ -1062,6 +1062,7 @@ input:focus, select:focus, textarea:focus {
   align-items: center;
   line-height: 20px;
   font-size: 100%;
+  border: none;
 }
 .top-bar .top-bar__wrap .top-bar__cur .top-bar__currencies button svg, .top-bar .top-bar__wrap .top-bar__cur .top-bar__languages button svg {
   width: 8px;

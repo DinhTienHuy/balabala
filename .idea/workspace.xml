@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8aa792c4-149a-47b9-95ce-0dae12fffd9e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/images/stickybtn.avif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/stickybtn2.avif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/variant_1.avif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/category.html" beforeDir="false" afterPath="$PROJECT_DIR$/category.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/category.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/category.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/base.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/header.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/product_detail.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/product_detail.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/product_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/category.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/category.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/header.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scss/product_detail.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/product_detail.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,20 +20,23 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2c5Fuu3SmqvyDGCXycPwTqQ86Ji" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/boo/project/balabala",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/boo/project/balabala&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -48,6 +46,7 @@
       <option name="presentableId" value="Default" />
       <updated>1707393759334</updated>
       <workItem from="1707393760992" duration="257000" />
+      <workItem from="1708014160542" duration="167000" />
     </task>
     <servers />
   </component>

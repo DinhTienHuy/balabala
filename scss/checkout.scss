@@ -26,7 +26,7 @@ textarea {
   line-height: normal;
 }
 .container {
-  max-width: 1200px !important;
+  max-width: 1050px !important;
   margin: 0 auto;
 }
 
@@ -365,9 +365,8 @@ header {
       align-items: center;
     }
     .content__wrapper {
-      max-width: 608px;
-
-      padding: 20px;
+      max-width: 650px;
+      padding: 42px;
     }
   }
   .content_right {
@@ -383,16 +382,16 @@ header {
     .sidebar {
       position: sticky;
       top: 30px;
-      max-width: 608px;
     }
   }
   @media (min-width: 1000px) {
     .content_left {
+      max-width: 55%;
+      width: 55%;
     }
-    .content_left,
     .content_right {
-      max-width: 50%;
-      width: 50%;
+      max-width: 45%;
+      width: 45%;
     }
   }
   @media (max-width: 999px) {
