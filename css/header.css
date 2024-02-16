@@ -440,7 +440,7 @@ input:focus, select:focus, textarea:focus {
 .bala-sidebar .drawer__content .content-login-sidebar .bala_field .bala_frm_input:focus ~ label, .bala-sidebar .drawer__content .content-login-sidebar .bala_field .bala_frm_input:not(:placeholder-shown) ~ label {
   transform: translateY(-6px) scale(0.8);
 }
-.bala-sidebar .drawer__content .content-login-sidebar .bala_field label {
+.bala-sidebar .drawer__content .content-login-sidebar .bala_field .discount-label {
   position: absolute;
   top: 0;
   left: 14px;

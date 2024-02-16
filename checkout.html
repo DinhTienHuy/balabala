@@ -90,9 +90,9 @@
                 <div class="fieldset">
                   <div class="field field-required">
                     <div class="field-input-wrapper">
-                      <label class="field-label" for="discount">Address</label>
                       <input placeholder="Discount code" autocapitalize="off" spellcheck="false" class="field-input"
                         size="30" type="text" id="discount">
+                      <label class="field-label" for="discount">Address</label>
                     </div>
                   </div>
                 </div>
@@ -182,14 +182,16 @@
               <div class="fieldset">
                 <div class="field">
                   <div class="field-input-wrapper">
+                    <input placeholder="Email or mobile phone number" autocapitalize="off" class="field-input" size="30" type="text" />
                     <label class="field-label">Email or mobile phone number</label>
-                    <input placeholder="Email or mobile phone number" autocapitalize="off" class="field-input" size="30"
-                      type="text" />
                   </div>
                 </div>
                 <div class="field checkbox-wrapper">
                   <div class="checkbox-input">
                     <input id="remem_email" type="checkbox" class="input-checkbox" name="" id="" />
+                    <label class="field-label" for="remem_email">
+                      Email or mobile phone number
+                    </label>
                     <div class="checkbox_icon">
                       <span>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" focusable="false" aria-hidden="true"
@@ -199,9 +201,6 @@
                         </svg>
                       </span>
                     </div>
-                    <label class="field-label" for="remem_email">
-                      Email or mobile phone number
-                    </label>
                   </div>
                 </div>
               </div>
@@ -214,8 +213,8 @@
             <div class="fieldset">
               <div class="field field-show-floating-label field-required">
                 <div class="field-input-wrapper field-input-wrapper-select">
-                  <label class="field-label" for="customer_shipping_district">Quận / huyện</label>
-                  <select class="field-input" id="customer_shipping_district" name="customer_shipping_district">
+                  <!-- <label class="field-label" for="customer_shipping_district">Quận / huyện</label> -->
+                  <select class="field-select" id="customer_shipping_district" name="customer_shipping_district">
                     <option data-code="null" value="null" selected="">
                       Chọn quận / huyện
                     </option>
@@ -233,51 +232,43 @@
               </div>
               <div class="field field-half">
                 <div class="field-input-wrapper">
+                  <input placeholder="First name (optional)" autocapitalize="off" spellcheck="false" class="field-input" size="30" type="text" id="checkout_user_email" name="checkout_user[email]" value="" />
                   <label class="field-label" for="checkout_user_email">First name (optional)</label>
-                  <input placeholder="First name (optional)" autocapitalize="off" spellcheck="false" class="field-input"
-                    size="30" type="text" id="checkout_user_email" name="checkout_user[email]" value="" />
                 </div>
               </div>
               <div class="field field-half">
                 <div class="field-input-wrapper">
+                  <input autocomplete="false" placeholder="Last name" autocapitalize="off" spellcheck="false" class="field-input" size="30" type="text" />
                   <label class="field-label" for="checkout_user_email">Last name</label>
-                  <input autocomplete="false" placeholder="Last name" autocapitalize="off" spellcheck="false"
-                    class="field-input" size="30" type="text" />
                 </div>
               </div>
               <div class="field field-required">
                 <div class="field-input-wrapper">
+                  <input placeholder="Postal code" autocapitalize="off" spellcheck="false" class="field-input" size="30" type="text" value="" />
                   <label class="field-label" for="billing_address_address1">Postal code</label>
-                  <input placeholder="Postal code" autocapitalize="off" spellcheck="false" class="field-input" size="30"
-                    type="text" value="" />
                 </div>
               </div>
               <div class="field field-required">
                 <div class="field-input-wrapper">
+                  <input placeholder="Address" autocapitalize="off" spellcheck="false" class="field-input" size="30" type="text" id="billing_address_address1" name="billing_address[address1]" value="" />
                   <label class="field-label" for="billing_address_address1">Address</label>
-                  <input placeholder="Address" autocapitalize="off" spellcheck="false" class="field-input" size="30"
-                    type="text" id="billing_address_address1" name="billing_address[address1]" value="" />
                 </div>
               </div>
               <div class="field field-required">
                 <div class="field-input-wrapper">
-                  <label class="field-label" for="billing_address_address1">Apartment, suite, etc.
-                    (optional)</label>
-                  <input placeholder="Apartment, suite, etc. (optional)" autocapitalize="off" spellcheck="false"
-                    class="field-input" size="30" type="text" id="billing_address_address1"
-                    name="billing_address[address1]" value="" />
+                  <input placeholder="Apartment, suite, etc. (optional)" autocapitalize="off" spellcheck="false" class="field-input" size="30" type="text" id="billing_address_address1" name="billing_address[address1]" value="" />
+                  <label class="field-label" for="billing_address_address1">Apartment, suite, etc. (optional)</label>
                 </div>
               </div>
               <div class="field field-half">
                 <div class="field-input-wrapper">
+                  <input autocomplete="false" placeholder="City" autocapitalize="off" spellcheck="false" class="field-input" size="30" type="text" />
                   <label class="field-label" for="checkout_user_email">City</label>
-                  <input autocomplete="false" placeholder="City" autocapitalize="off" spellcheck="false"
-                    class="field-input" size="30" type="text" />
                 </div>
               </div>
               <div class="field field-half">
                 <div class="field-input-wrapper">
-                  <select class="field-input">
+                  <select class="field-select">
                     <option data-code="null" value="null" selected="">
                       Sate
                     </option>
@@ -295,10 +286,10 @@
               </div>
               <div class="field field-required">
                 <div class="field-input-wrapper">
-                  <label class="field-label" for="billing_address_address1">Phone</label>
                   <input placeholder="Phone" autocapitalize="off" spellcheck="false" class="field-input" size="30"
                     type="text" value="" />
-                  <button class="icon_phone">
+                  <label class="field-label" for="billing_address_address1">Phone</label>
+                  <button class="icon_phone show-tooltip ">
                     <span>
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" focusable="false"
                         aria-label="More information" class="a8x1wuo _1fragemgc _1fragemig _1frageme8 _1frageme4">
@@ -308,7 +299,7 @@
                         <circle cx="7" cy="9.7" r="0.1"></circle>
                       </svg>
                     </span>
-                    </span>
+                    <span class="tooltiptext tooltip-top">In case we need to contact you about your order</span>
                   </button>
                 </div>
               </div>
@@ -355,9 +346,9 @@
                 <div class="fieldset">
                   <div class="field field-required">
                     <div class="field-input-wrapper">
-                      <label class="field-label" for="billing_address_address1">Card number</label>
                       <input placeholder="Card number" autocapitalize="off" spellcheck="false" class="field-input"
                         size="30" type="text" value="" />
+                        <label class="field-label" for="billing_address_address1">Card number</label>
                       <button class="icon_phone">
                         <span>
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" focusable="false"
@@ -367,23 +358,20 @@
                             </path>
                           </svg>
                         </span>
-                        </span>
                       </button>
                     </div>
                   </div>
                   <div class="field field-required field-half">
                     <div class="field-input-wrapper">
+                      <input placeholder="Expiration date (MM / YY)" autocapitalize="off" spellcheck="false" class="field-input" size="30" type="text" value="" />
                       <label class="field-label" for="billing_address_address1">Expiration date (MM / YY)</label>
-                      <input placeholder="Expiration date (MM / YY)" autocapitalize="off" spellcheck="false"
-                        class="field-input" size="30" type="text" value="" />
                     </div>
                   </div>
                   <div class="field field-required field-half">
                     <div class="field-input-wrapper">
+                      <input placeholder="Security code" autocapitalize="off" spellcheck="false" class="field-input" size="30" type="text" value="" />
                       <label class="field-label" for="billing_address_address1">Security code</label>
-                      <input placeholder="Security code" autocapitalize="off" spellcheck="false" class="field-input"
-                        size="30" type="text" value="" />
-                      <button class="icon_phone">
+                      <button class="icon_phone show-tooltip">
                         <span>
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" focusable="false"
                             aria-label="More information" class="a8x1wuo _1fragemgc _1fragemig _1frageme8 _1frageme4">
@@ -393,15 +381,14 @@
                             <circle cx="7" cy="9.7" r="0.1"></circle>
                           </svg>
                         </span>
-                        </span>
+                        <span class="tooltiptext tooltip-top">3-digit security code usually found on the back of your card. American Express cards have a 4-digit code located on the front.</span>
                       </button>
                     </div>
                   </div>
                   <div class="field field-required">
                     <div class="field-input-wrapper">
+                      <input placeholder="Name on card" autocapitalize="off" spellcheck="false" class="field-input" size="30" type="text" value="" />
                       <label class="field-label" for="billing_address_address1">Name on card</label>
-                      <input placeholder="Name on card" autocapitalize="off" spellcheck="false" class="field-input"
-                        size="30" type="text" value="" />
                     </div>
                   </div>
                   <div class="field checkbox-wrapper">
@@ -428,8 +415,8 @@
                       <div class="fieldset">
                         <div class="field field-show-floating-label field-required">
                           <div class="field-input-wrapper field-input-wrapper-select">
-                            <label class="field-label" for="customer_shipping_district">Quận / huyện</label>
-                            <select class="field-input" id="customer_shipping_district"
+                            <!-- <label class="field-label" for="customer_shipping_district">Quận / huyện</label> -->
+                            <select class="field-select" id="customer_shipping_district"
                               name="customer_shipping_district">
                               <option data-code="null" value="null" selected="">
                                 Chọn quận / huyện
@@ -456,24 +443,27 @@
                         </div>
                         <div class="field field-half">
                           <div class="field-input-wrapper">
-                            <label class="field-label" for="checkout_user_email">Last name</label>
                             <input autocomplete="false" placeholder="Last name" autocapitalize="off" spellcheck="false"
                               class="field-input" size="30" type="text">
+                              <label class="field-label" for="checkout_user_email">Last name</label>
+
                           </div>
                         </div>
                         <div class="field field-required">
                           <div class="field-input-wrapper">
-                            <label class="field-label" for="billing_address_address1">Postal code</label>
                             <input placeholder="Postal code" autocapitalize="off" spellcheck="false" class="field-input"
                               size="30" type="text" value="">
+                              <label class="field-label" for="billing_address_address1">Postal code</label>
+
                           </div>
                         </div>
                         <div class="field field-required">
                           <div class="field-input-wrapper">
-                            <label class="field-label" for="billing_address_address1">Address</label>
                             <input placeholder="Address" autocapitalize="off" spellcheck="false" class="field-input"
                               size="30" type="text" id="billing_address_address1" name="billing_address[address1]"
                               value="">
+                              <label class="field-label" for="billing_address_address1">Address</label>
+
                           </div>
                         </div>
                         <div class="field field-required">
@@ -494,7 +484,7 @@
                         </div>
                         <div class="field field-half">
                           <div class="field-input-wrapper">
-                            <select class="field-input">
+                            <select class="field-select">
                               <option data-code="null" value="null" selected="">
                                 Sate
                               </option>
@@ -623,9 +613,9 @@
                 <div class="fieldset">
                   <div class="field field-required">
                     <div class="field-input-wrapper">
-                      <label class="field-label">Mobile phone number</label>
                       <input autocapitalize="off" spellcheck="false" class="field-input" size="30" type="text"
                         value="+55">
+                      <label class="field-label">Mobile phone number</label>
                       <button class="icon_phone2">
                         <span>
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" focusable="false"
@@ -690,38 +680,38 @@
           <div class="sidebar">
             <div class="wrapper">
               <div class="summary_show">
-      <div class="summary_wrap_heading">
-         <h2>Order summary <span class="count">(4)</span></h2>
-        <div class="action_show">
-          <span>Show</span>
-          <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" focusable="false" aria-hidden="true"
-              class="a8x1wuo _1fragemgc _1fragemig _1frageme8 _1frageme4">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="m11.9 5.6-4.653 4.653a.35.35 0 0 1-.495 0L2.1 5.6"></path>
-            </svg></span>
-        </div>
-      </div>
-      <div class="summary_wrapper">
-         <div class="product-list">
-                <div class="item-product">
-                  <div class="image-product">
-                    <img src="images/product_1.avif" alt="">
-                    <span class="count">2</span>
-                  </div>
-                  <div class="info-product">
-                    <div class="left-info">
-                      <div class="name-product">Balabala Toddler Girl New Year Season Knitted Long Sleeve Sweatshirt
-                      </div>
-                      <div class="variant-product">Off-White / 110</div>
-                    </div>
-                  </div>
-                  <div class="right-info">
-                    <div class="price-product">₫2,836,000</div>
+                <div class="summary_wrap_heading">
+                  <h2>Order summary <span class="count">(4)</span></h2>
+                  <div class="action_show">
+                    <span>Show</span>
+                    <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" focusable="false" aria-hidden="true"
+                        class="a8x1wuo _1fragemgc _1fragemig _1frageme8 _1frageme4">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                          d="m11.9 5.6-4.653 4.653a.35.35 0 0 1-.495 0L2.1 5.6"></path>
+                      </svg></span>
                   </div>
                 </div>
+                <div class="summary_wrapper">
+                  <div class="product-list">
+                          <div class="item-product">
+                            <div class="image-product">
+                              <img src="images/product_1.avif" alt="">
+                              <span class="count">2</span>
+                            </div>
+                            <div class="info-product">
+                              <div class="left-info">
+                                <div class="name-product">Balabala Toddler Girl New Year Season Knitted Long Sleeve Sweatshirt
+                                </div>
+                                <div class="variant-product">Off-White / 110</div>
+                              </div>
+                            </div>
+                            <div class="right-info">
+                              <div class="price-product">₫2,836,000</div>
+                            </div>
+                          </div>
+                        </div>
+                </div>
               </div>
-      </div>
-    </div>
               <div class="product-list pro_desktop">
                 <div class="item-product">
                   <div class="image-product">
@@ -744,9 +734,8 @@
                 <div class="fieldset">
                   <div class="field field-required">
                     <div class="field-input-wrapper">
-                      <label class="field-label" for="discount">Address</label>
-                      <input placeholder="Discount code" autocapitalize="off" spellcheck="false" class="field-input"
-                        size="30" type="text" id="discount">
+                      <input placeholder="Discount code" autocapitalize="off" spellcheck="false" class="field-input" size="30" type="text" id="discount">
+                      <label class="discount-label" for="discount">Discount code</label>
                     </div>
                   </div>
                 </div>
@@ -796,12 +785,12 @@
                 <span>₫498,274</span>
               </div>
               <div class="btn_checkout">
-            <button type="submit">
-              <span>
-                Pay now
-              </span>
-            </button>
-          </div>
+                <button type="submit">
+                  <span>
+                    Pay now
+                  </span>
+                </button>
+              </div>
             </div>
           </div>
         </div>

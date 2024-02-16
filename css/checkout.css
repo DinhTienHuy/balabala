@@ -70,6 +70,45 @@ header .main_header span .cart_link span svg {
   fill: none;
 }
 
+.show-tooltip {
+  position: relative;
+}
+.show-tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+.show-tooltip .tooltiptext {
+  visibility: hidden;
+  position: absolute;
+  min-width: 160px;
+  background-color: #555;
+  color: #fff !important;
+  text-align: center;
+  padding: 12px 15px;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.6s;
+  font-size: 13px;
+  line-height: 1.2;
+  border-radius: 4px;
+  font-weight: 500;
+}
+.show-tooltip .tooltiptext.tooltip-top {
+  bottom: 150%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.show-tooltip .tooltiptext.tooltip-top:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
 .fieldset {
   margin: -0.45em;
   zoom: 1;
@@ -82,10 +121,27 @@ header .main_header span .cart_link span svg {
 }
 .fieldset .field .field-input-wrapper {
   position: relative;
-  position: relative;
+}
+.fieldset .field .field-input-wrapper ::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: transparent;
+}
+.fieldset .field .field-input-wrapper :-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: transparent;
+}
+.fieldset .field .field-input-wrapper ::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: transparent;
+}
+.fieldset .field .field-input-wrapper :-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: transparent;
+}
+.fieldset .field .field-input-wrapper input::placeholder {
+  color: transparent;
 }
 .fieldset .field .field-input-wrapper .field-input {
-  box-shadow: 0 0 0 0.6px #d9d9d9;
   transition: all 0.2s ease-out;
   background-color: white;
   color: #333333;
@@ -95,33 +151,40 @@ header .main_header span .cart_link span svg {
   width: 100%;
   padding: 13.5px 11px;
   word-break: normal;
+  border: 1px solid #dedede;
+  height: 50px;
+  line-height: 48px;
 }
-.fieldset .field .field-input-wrapper .field-input:focus {
-  box-shadow: 0 0 0 2px #338dbc;
-  outline: none;
+.fieldset .field .field-input-wrapper .field-input:focus, .fieldset .field .field-input-wrapper .field-input:not(:placeholder-shown) {
+  padding: 18px 14px 6px;
+}
+.fieldset .field .field-input-wrapper .field-input:focus ~ label, .fieldset .field .field-input-wrapper .field-input:not(:placeholder-shown) ~ label {
+  transform: translateY(-6px) scale(0.8);
+}
+.fieldset .field .field-input-wrapper .field-select {
+  transition: all 0.2s ease-out;
+  background-color: white;
+  color: #333333;
+  border-radius: 5px;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 13.5px 11px;
+  word-break: normal;
+  border: 1px solid #dedede;
 }
 .fieldset .field .field-input-wrapper .field-label {
-  font-size: 0.85714em;
-  font-weight: normal;
   position: absolute;
   top: 0;
-  width: 100%;
-  padding: 0 0.93333em;
-  z-index: 1;
-  user-select: none;
-  transform: translateY(3px);
+  left: 14px;
+  transform: scale(1);
+  transform-origin: left top;
+  transition: transform 0.2s ease-in-out;
   pointer-events: none;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  box-sizing: border-box;
-  opacity: 0;
-  filter: alpha(opacity=0);
-  color: #999999;
-  transition: all 0.2s ease-out;
-  margin: 0.5em 0;
-  margin-top: 0.3em;
-  display: block;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  color: rgba(0, 0, 0, 0.56);
 }
 .fieldset .field .field-input-wrapper .field-description {
   display: block;
@@ -502,7 +565,6 @@ header .main_header span .cart_link span svg {
   margin: 0;
 }
 .content__wrapper .payment {
-  overflow: hidden;
   border: 1px solid #dedede;
   border-radius: 5px;
 }
@@ -580,15 +642,11 @@ header .main_header span .cart_link span svg {
   padding: 0;
 }
 .content__wrapper .remember_me .content-box-wrapper .content-box-row .fieldset .field label {
-  font-size: 0.75714em;
-  top: -3px;
-  opacity: 1;
-  left: 32px;
+  font-size: 14px;
+  left: 40px;
 }
 .content__wrapper .remember_me .content-box-wrapper .content-box-row .fieldset .field input {
-  padding-top: 15px;
   padding-left: 40px;
-  padding-bottom: 8px;
 }
 .content__wrapper .remember_me .content-box-wrapper .content-box-row .fieldset .field .icon_phone2 {
   left: 13px;
@@ -775,6 +833,48 @@ header .main_header span .cart_link span svg {
   flex: 1;
   margin-right: 15px;
 }
+.sidebar .wrapper .discount-wrapper ::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: transparent;
+}
+.sidebar .wrapper .discount-wrapper :-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: transparent;
+}
+.sidebar .wrapper .discount-wrapper ::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: transparent;
+}
+.sidebar .wrapper .discount-wrapper :-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: transparent;
+}
+.sidebar .wrapper .discount-wrapper input::placeholder {
+  color: transparent;
+}
+.sidebar .wrapper .discount-wrapper input {
+  height: 50px;
+  line-height: 50px;
+}
+.sidebar .wrapper .discount-wrapper input:focus, .sidebar .wrapper .discount-wrapper input:not(:placeholder-shown) {
+  padding: 18px 14px 6px;
+  border-color: rgba(102, 102, 102, 0.8);
+}
+.sidebar .wrapper .discount-wrapper input:focus ~ label, .sidebar .wrapper .discount-wrapper input:not(:placeholder-shown) ~ label {
+  transform: translateY(-6px) scale(0.8);
+}
+.sidebar .wrapper .discount-wrapper label {
+  position: absolute;
+  top: 0;
+  left: 14px;
+  transform: scale(1);
+  transform-origin: left top;
+  transition: transform 0.2s ease-in-out;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
 .sidebar .wrapper .discount-wrapper button {
   background-color: #1773b0;
   color: #ffffff;
@@ -866,7 +966,7 @@ header .main_header span .cart_link span svg {
   }
 }
 .summary_show .summary_wrap_heading {
-  padding: 12px 0;
+  padding: 12px 20px;
   background-color: #ffffff;
   max-width: 650px;
   margin: 0 auto;
